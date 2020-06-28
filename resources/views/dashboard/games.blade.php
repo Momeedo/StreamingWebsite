@@ -108,16 +108,20 @@
 						<tbody>
             @foreach($games as $game)
 							<tr>
-								<td>5</td>
+								<td>{{$game->id}}</td>
 								<td><i class="fas fa-circle" style="color:#e74a3b;"></i> On-going</td>
-								<td>BeIN Sports HD 1 (Arabic)<br>BeIN Sports HD 3 (French)</td>
-								<td><img width="20px" src="https://upload.wikimedia.org/wikipedia/sco/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png"> FC Barcelona (Spain)</td>
-								<td><img width="20px" src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/1200px-Real_Madrid_CF.svg.png"> Real Madrid FC (Spain)</td>
-								<td>Liga (Spain)</td>
-								<td>Week 7</td>
-								<td>Camp Nou Stadium (Barcelona)</td>
-								<td>2020/05/25 18:30</td>
-								<td>2020/05/25 20:30</td>
+								<td>
+                  @foreach($game->channels as $channel)
+                    {{$channel->name}}<br>
+                  @endforeach
+                </td>
+								<td><img width="20px" src="{{$game->teamA->logo}}"> {{$game->teamA->name}}</td>
+								<td><img width="20px" src="{{$game->teamB->logo}}"> {{$game->teamB->name}}</td>
+								<td>{{$game->competition->name}}</td>
+								<td>{{$game->round}}</td>
+								<td>{{$game->location->name}}</td>
+								<td>{{$game->start_date}}</td>
+								<td>{{$game->end_date}}</td>
 								<td> 
 									<div class="text-center">
 										<a href="#" class="btn btn-primary btn-icon-split">

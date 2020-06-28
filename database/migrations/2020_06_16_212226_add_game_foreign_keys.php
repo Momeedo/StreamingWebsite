@@ -17,6 +17,8 @@ class AddGameForeignKeys extends Migration
         Schema::table('games', function (Blueprint $table) {
           $table->foreign('team_a_id')->references('id')->on('teams')->onDelete('cascade');
           $table->foreign('team_b_id')->references('id')->on('teams')->onDelete('cascade');
+          $table->foreign('competition_id')->references('id')->on('competitions')->onDelete('cascade');
+          $table->foreign('location_id')->references('id')->on('locations')->onDelete('cascade');
         });
     }
 
