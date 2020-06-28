@@ -12,7 +12,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
+// Route::group(['prefix' => 'dashboard', 'middleware' => 'auth::admin'], function () {
+//     Route::pattern('id', '[0-9]+');
+//     Route::get('/', 'Dashboard\DashboardController@index');
+// });
+Route::get('/dashboard', 'Dashboard\DashboardController@index');
 Route::get('/', function () {
-    return view('welcome');
+    return view('front.home');
 });
