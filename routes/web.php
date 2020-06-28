@@ -14,11 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 Auth::routes();
 
-// Route::group(['prefix' => 'dashboard', 'middleware' => 'auth::admin'], function () {
-//     Route::pattern('id', '[0-9]+');
-//     Route::get('/', 'Dashboard\DashboardController@index');
-// });
 Route::get('/', 'Dashboard\DashboardController@index');
-Route::get('/manage', 'Dashboard\DashboardController@index');
-Route::get('/manage/games', 'Dashboard\GameController@index');
 
+Route::group(['prefix' => 'manage', 'middleware' => 'admin'], function () {
+     Route::pattern('id', '[0-9]+');
+     Route::get('/', 'Dashboard\DashboardController@index');
+     Route::get('/games', 'Dashboard\GameController@index');
+});
+
+
+Route::get('/', function () {
+    return view('front.home');
+});
+
+Route::get('logout', 'Auth\LoginController@logout');
