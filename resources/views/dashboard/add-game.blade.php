@@ -68,8 +68,8 @@
 							<tr>
 								<th>Team A (Auto-complete from available teams)</th>
 								<td>
-                  <input class="typeahead form-control" type="text">
-                </td>
+                                    {!! Form::select('id_list[]', $teams, null, ['id' => 'teams', 'class' => 'form-control']) !!}
+                                </td>
 							</tr>
 							<tr>
 								<th>Team B (Auto-complete from available teams)</th>
@@ -94,7 +94,7 @@
 							<tr>
 								<th>Start Date</th>
 								<td style="min-width:70%;">
-								</div><input type='text' class="form-control" id='datetimepickerstart'/></div>
+								<div><input type='text' class="form-control" id='datetimepickerstart'/></div>
 						</td>
 					</tr>
 					<tr>
@@ -125,7 +125,11 @@
 @endsection
 
 @section('js')
-
+<script>
+    $('#teams').select2();
+    
+</script>
+<!--
 <script type="text/javascript">
     var path = "{{ route('game_autocomplete') }}";
     $('input.typeahead').typeahead({
@@ -136,4 +140,5 @@
         }
     });
 </script>
+        -->
 @endsection

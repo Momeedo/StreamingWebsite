@@ -17,16 +17,20 @@ class GameController extends Controller
       $games = Game::all();
       return view('dashboard.games', ['games' => $games]);
     }
-    public function new(){
-      $teams = Team::all()->pluck('title', 'title');
-			return view('dashboard.add-game', ['teams' => $teams]);
-    }
     
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    /*
+    public function new(){
+      $team_list = Team::all()->pluck('title', 'title');
+			return view('dashboard.add-game', ['teams' => $team_list]);
+    }
+    */
+    
+    public function create(){
+        $teams = Team::orderBy('name', 'asc')->pluck('name', 'id');
+        $teams->prepend('', '');
+        return view('dashboard.add-game', array('teams' => $teams));
+    }
+    /*
     public function autocomplete(Request $request)
     {
        $query = $request->input('query');
@@ -36,4 +40,5 @@ class GameController extends Controller
         // return response()->json($data);
         echo "hi";
     }
+    */
 }

@@ -10,6 +10,7 @@
 		<link href="{{ asset('/dashboard/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 		<link href="{{ asset('/dashboard/css/sb-admin-2.min.css') }}" rel="stylesheet">
+		<link href="{{ asset('/dashboard/vendor/bootstrap-select2/select2.css') }}" rel="stylesheet">
 	</head>
 	<body id="page-top">
 		<!-- Page Wrapper -->
@@ -166,6 +167,7 @@
 		<!-- Page level custom scripts -->
 		<script src="{{ asset('/dashboard/js/demo/chart-area-demo.js') }}"></script>
 		<script src="{{ asset('/dashboard/js/demo/chart-pie-demo.js') }}"></script>
+		<script src="{{ asset('/dashboard/vendor/bootstrap-select2/select2.min.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
     @yield('js')
 		
