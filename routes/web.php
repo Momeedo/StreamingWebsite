@@ -20,9 +20,11 @@ Route::group(['prefix' => 'manage', 'middleware' => 'admin'], function () {
      Route::pattern('id', '[0-9]+');
      Route::get('/', 'Dashboard\DashboardController@index');
      Route::get('/games', 'Dashboard\GameController@index');
+     Route::get('/games/new', 'Dashboard\GameController@new');
+
 });
 
-
+Route::get('/games/autocomplete', 'Dashboard\GameController@new')->name('game_autocomplete');
 Route::get('/', function () {
     return view('front.home');
 });

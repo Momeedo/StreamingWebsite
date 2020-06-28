@@ -57,7 +57,7 @@
 	<!-- Begin Page Content -->
 	<div class="container-fluid">
 		
-		<a href="add-game.html" class="btn btn-success btn-icon-split" style="margin-bottom:20px;">
+		<a href="/manage/games/new" class="btn btn-success btn-icon-split" style="margin-bottom:20px;">
 			<span class="icon text-white-50">
 				<i class="fas fa-plus-square"></i>
 			</span>
@@ -109,7 +109,10 @@
             @foreach($games as $game)
 							<tr>
 								<td>{{$game->id}}</td>
-								<td><i class="fas fa-circle" style="color:#e74a3b;"></i> On-going</td>
+								<td><i class="fas fa-circle" style="color:#e74a3b;"></i>{{$game->status(
+                  $game->start_date,
+                  $game->end_date
+                )}}</td>
 								<td>
                   @foreach($game->channels as $channel)
                     {{$channel->name}}<br>

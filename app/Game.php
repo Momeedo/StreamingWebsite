@@ -2,14 +2,25 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Game extends Model
 {
-    public function isOngoing ($date) {
-      $today = date("Y-m-d");
-      $today_dt = new DateTime($today);
-      return $this->startDate;
+    public function status ($st, $et) {
+      $today = Carbon::now();
+      $sd = Carbon::parse($st);
+      $ed = Carbon::parse($et);
+
+
+      if ($today > $sd && $today <= $ed) {
+        $status = 'On-going';
+      } else if ($today >= $ed) {
+        $status = 'Finished';
+      } else if ($sd > $today) {
+        $status = 'Scheduled';
+      }
+      return $status;
     }
     //
     public function channels () {

@@ -166,6 +166,8 @@
 		<!-- Page level custom scripts -->
 		<script src="{{ asset('/dashboard/js/demo/chart-area-demo.js') }}"></script>
 		<script src="{{ asset('/dashboard/js/demo/chart-pie-demo.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
+    @yield('js')
 		
 	</body>
 </html>
