@@ -18,7 +18,7 @@ Auth::routes();
 //     Route::pattern('id', '[0-9]+');
 //     Route::get('/', 'Dashboard\DashboardController@index');
 // });
-Route::get('/dashboard', 'Dashboard\DashboardController@index');
-Route::get('/', function () {
-    return view('front.home');
-});
+Route::get('/', 'Dashboard\DashboardController@index');
+Route::get('/manage', 'Dashboard\DashboardController@index');
+Route::get('/manage/games', 'Dashboard\GameController@index');
+

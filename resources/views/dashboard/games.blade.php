@@ -1,7 +1,4 @@
 @extends('layouts.dashboard')
-<?php
-	$setting = \App\Setting::first(); 
-?>
 @section('content')
 <!-- Main Content -->
 <div id="content">
@@ -109,6 +106,7 @@
 							</tr>
 						</tfoot>
 						<tbody>
+            @foreach($games as $game)
 							<tr>
 								<td>5</td>
 								<td><i class="fas fa-circle" style="color:#e74a3b;"></i> On-going</td>
@@ -139,69 +137,7 @@
 									</div>
 								</td>
 							</tr>
-							
-							<tr>
-								<td>8</td>
-								<td><i class="fas fa-calendar" style="color:#f6c23e;"></i> Planned</td>
-								<td>BeIN Sports HD 1 (Arabic)</td>
-								<td><img width="20px" src="https://upload.wikimedia.org/wikipedia/sco/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png"> FC Barcelona (Spain)</td>
-								<td><img width="20px" src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/1200px-Real_Madrid_CF.svg.png"> Real Madrid FC (Spain)</td>
-								<td>Copa Del Rey (Spain)</td>
-								<td>Semi Final</td>
-								<td>Camp Nou Stadium (Barcelona)</td>
-								<td>2020/05/25 18:30</td>
-								<td>2020/05/25 20:30</td>
-								<td> 
-									<div class="text-center">
-										<a href="#" class="btn btn-primary btn-icon-split">
-											<span class="icon text-white-50">
-												<i class="fas fa-edit"></i>
-											</span>
-										</a> 
-									</div>
-								</td>
-								<td> 
-									<div class="text-center">
-										<a href="#" class="btn btn-danger btn-icon-split" data-toggle="modal" data-target="#deleteModal">
-											<span class="icon text-white-50">
-												<i class="fas fa-trash"></i>
-											</span>
-										</a> 
-									</div>
-								</td>
-							</tr>
-							
-							<tr>
-								<td>10</td>
-								<td><i class="fas fa-check-circle" style="color:#1cc88a;"></i> Completed</td>
-								<td>BeIN Sports HD 1 (Arabic)</td>
-								<td><img width="20px" src="https://upload.wikimedia.org/wikipedia/sco/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png"> FC Barcelona (Spain)</td>
-								<td><img width="20px" src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/1200px-Real_Madrid_CF.svg.png"> Real Madrid FC (Spain)</td>
-								<td>Liga (Spain)</td>
-								<td>Final</td>
-								<td>Camp Nou Stadium (Barcelona)</td>
-								<td>2020/05/25 18:30</td>
-								<td>2020/05/25 20:30</td>
-								<td> 
-									<div class="text-center">
-										<a href="#" class="btn btn-primary btn-icon-split">
-											<span class="icon text-white-50">
-												<i class="fas fa-edit"></i>
-											</span>
-										</a> 
-									</div>
-								</td>
-								<td> 
-									<div class="text-center">
-										<a href="#" class="btn btn-danger btn-icon-split" data-toggle="modal" data-target="#deleteModal">
-											<span class="icon text-white-50">
-												<i class="fas fa-trash"></i>
-											</span>
-										</a> 
-									</div>
-								</td>
-							</tr>
-							
+							@endforeach
 						</tbody>
 					</table>
 				</div>

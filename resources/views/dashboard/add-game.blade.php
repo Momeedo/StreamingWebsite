@@ -1,7 +1,4 @@
 @extends('layouts.dashboard')
-<?php
-	$setting = \App\Setting::first(); 
-?>
 @section('content')
 <!-- Main Content -->
 <div id="content">

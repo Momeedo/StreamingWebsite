@@ -15,7 +15,7 @@
 		<!-- Page Wrapper -->
 		<div id="wrapper">
 			
-			<!-- Sidebar -->
+			<!-- Sidebar -->-
 			<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 				
 				<!-- Sidebar - Brand -->
@@ -46,7 +46,7 @@
 				
 				<!-- Nav Item -->
 				<li class="nav-item">
-					<a class="nav-link" href="games.html">
+					<a class="nav-link" href="/manage/games">
 						<i class="fas fa-calendar-alt"></i>
 					<span>Games</span></a>
 				</li>
