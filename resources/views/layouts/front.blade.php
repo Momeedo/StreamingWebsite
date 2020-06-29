@@ -31,7 +31,7 @@
 								<a href="#" title="" class="menu">
 									<i class="icon-menu"></i>
 								</a>
-								<a href="index.html" title="" class="logo">
+								<a href="{{ url('/') }}" title="" class="logo">
 									<img src="images/logo.png" alt="">
 								</a>
 							</div><!--menu_logo end-->
@@ -56,19 +56,19 @@
 													<span>
 														<i class="icon-user"></i>
 													</span>
-													<a href="#" title="">Login</a>
+													<a href="{{ url('login') }}" title="">Login</a>
 												</li>
 												<li>
 													<span>
 														<i class="icon-plus"></i>
 													</span>
-													<a href="#" title="">Register</a>
+													<a href="{{ url('register') }}" title="">Register</a>
 												</li>
 												<li>
 													<span>
 														<i class="icon-logout"></i>
 													</span>
-													<a href="#" title="">Sign out</a>
+													<a href="{{ url('logout') }}" title="">Sign out</a>
 												</li>
 											</ul>
 										</div><!--sd_menu end-->
@@ -88,53 +88,53 @@
 							<span>
 								<i class="fas fa-home"></i>
 							</span>
-							<a href="index.html" title="">Home</a>
+							<a href="{{ url('/') }}" title="">Home</a>
 						</li>
 					</ul>
 				</div><!--sd_menu end-->
 				<div class="sd_menu">
-					<h3><a href="channels.html">Channels</a></h3>
+					<h3><a href="{{ url('channels') }}">Channels</a></h3>
 					<ul class="mm_menu">
 						<li>
 							<span>
 								<i class="fas fa-tv"></i>
 							</span>
-							<a href="channels.html" title="">English Channels <sup>(5)</sup></a>
+							<a href="{{ url('channels?lang=english') }}" title="">English Channels <sup>(5)</sup></a>
 						</li>
 						<li>
 							<span>
 								<i class="fas fa-tv"></i>
 							</span>
-							<a href="channels.html" title="">French Channels <sup>(2)</sup></a>
+							<a href="{{ url('channels?lang=french') }}" title="">French Channels <sup>(2)</sup></a>
 						</li>
 						<li>
 							<span>
 								<i class="fas fa-tv"></i>
 							</span>
-							<a href="channels.html" title="">Arabic Channels <sup>(7)</sup></a>
+							<a href="{{ url('channels?lang=arabic') }}" title="">Arabic Channels <sup>(7)</sup></a>
 						</li>
 					</ul>
 				</div>
 				<div class="sd_menu">
-					<h3><a href="games.html">Highlighted Games</a></h3>
+					<h3><a href="{{ url('games') }}">Highlighted Games</a></h3>
 					<ul class="mm_menu">
 						<li>
 							<span>
 								<i class="fas fa-calendar"></i>
 							</span>
-							<a href="games.html" title="">On-going Games <sup>(1)</sup></a>
+							<a href="{{ url('games?status=on-going') }}" title="">On-going Games <sup>(1)</sup></a>
 						</li>
 						<li>
 							<span>
 								<i class="fas fa-calendar-day"></i>
 							</span>
-							<a href="games.html" title="">Planned Games <sup>(2)</sup></a>
+							<a href="{{ url('games?status=scheduled') }}" title="">Planned Games <sup>(2)</sup></a>
 						</li>
 						<li>
 							<span>
 								<i class="fas fa-calendar-check"></i>
 							</span>
-							<a href="games.html" title="">Completed Games <sup>(10)</sup></a>
+							<a href="{{ url('games?status=completed') }}" title="">Completed Games <sup>(10)</sup></a>
 						</li>
 					</ul>
 				</div>
@@ -144,13 +144,13 @@
 							<span>
 								<i class="fas fa-envelope"></i>
 							</span>
-							<a href="contact.html" title="">Contact Us</a>
+							<a href="{{ url('contact') }}" title="">Contact Us</a>
 						</li>
 						<li>
 							<span>
 								<i class="fas fa-user-lock"></i>
 							</span>
-							<a href="privacy-policy.html" title="">Privacy Policy</a>
+							<a href="{{ url('privacy-policy') }}" title="">Privacy Policy</a>
 						</li>
 					</ul>
 				</div><!--sd_menu end-->

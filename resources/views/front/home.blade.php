@@ -20,7 +20,7 @@
 <section class="vds-main">
 	<div class="container">
 		<div class="vidz_sec">
-			<h3>Highlighted Games of the Day <a class="h3-seeall" href="games.html">(See All)</a></h3>
+			<h3>Highlighted Games of the Day <a class="h3-seeall" href="{{ url('games') }}">(See All)</a></h3>
 			<div class="vidz_list">
 				<div class="row">
 					
@@ -157,7 +157,7 @@
 		<div class="vidz-row">
 			<div class="container">
 				<div class="vidz_sec">
-					<h3>All Channels <a class="h3-seeall" href="channels.html">(See All)</a></h3>
+					<h3>All Channels <a class="h3-seeall" href="{{ url('channels') }}">(See All)</a></h3>
 					<div class="vidz_list">
 						<div class="row">
 							
