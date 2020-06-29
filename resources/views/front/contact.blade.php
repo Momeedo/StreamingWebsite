@@ -40,6 +40,7 @@
 					<tr><td>
 						<center><a href="#" class="btn-default"><i class="icon-message"></i> Send</a></center>
 					</td></tr>
+                    <tr><td><div style="height:100px;"></div></td></tr>
 				</tbody>
 			</table>
 		</div>

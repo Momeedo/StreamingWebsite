@@ -31,8 +31,10 @@ Route::group(['prefix' => 'manage', 'middleware' => 'admin'], function () {
 
 });
 
-Route::get('/', function () {
-    return view('front.home');
-});
+Route::get('/', 'Front\HomeController@index');
+Route::get('/privacy-policy', 'Front\HomeController@privacy');
+Route::get('/contact', 'Front\ContactController@index');
+Route::get('/games', 'Front\GameController@index');
+Route::get('/channels', 'Front\ChannelController@index');
 
 Route::get('logout', 'Auth\LoginController@logout');
