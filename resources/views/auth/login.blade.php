@@ -53,7 +53,7 @@
             @endif
 		</div><!--user-account end--->
 		<div class="fr-ps">
-			<h1>Don’t have an account? <a href="register.html" title="" class="show_signup"> Signup here</a></h1>
+			<h1>Don’t have an account? <a href="{{ url('register') }}" title="Signup" class="show_signup"> Signup here</a></h1>
 		</div><!--fr-ps end-->
 	</div><!--login end--->
 </section><!--form_popup end-->

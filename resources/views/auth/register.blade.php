@@ -60,11 +60,11 @@
 				</div><!--input-sec end-->
 			</form>
 			<div class="form-text">
-				<p>By signing up you agree to Oren’s <a href="#" title="">Terms of Service</a> and <a href="#" title="">Privacy Policy</a> </p>
+				<p>By signing up you agree to our <a href="{{ url('privacy-policy') }}" title="">Privacy Policy</a>.</p>
 			</div>
 		</div><!--user-account end--->
 		<div class="fr-ps">
-			<h1>Already have an account? <a href="login.html" title="" class="show_signup">Login here</a></h1>
+			<h1>Already have an account? <a href="{{ url('login') }}" title="Login" class="show_signup">Login here</a></h1>
 		</div><!--fr-ps end-->
 	</div><!--login end--->
 	
