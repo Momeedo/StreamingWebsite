@@ -89,13 +89,6 @@
 						<i class="fas fa-envelope"></i>
 					<span>Messages</span></a>
 				</li>	  
-				<!-- Divider -->
-				<hr class="sidebar-divider">	 
-				
-				<!-- Heading -->
-				<div class="sidebar-heading">
-					Settings
-				</div>
 				
 				<!-- Divider -->
 				<hr class="sidebar-divider d-none d-md-block">

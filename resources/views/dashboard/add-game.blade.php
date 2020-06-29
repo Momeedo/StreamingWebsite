@@ -10,29 +10,9 @@
 		<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
 			<i class="fa fa-bars"></i>
 		</button>
-		<!-- Topbar Search -->
-		<form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-			<div class="input-group"> 
-				<input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-				<div class="input-group-append">
-					<button class="btn btn-primary" type="button">
-						<i class="fas fa-search fa-sm"></i>
-					</button>
-				</div>
-			</div>
-		</form>
 		
 		<!-- Topbar Navbar -->
 		<ul class="navbar-nav ml-auto">
-			
-			<!-- Nav Item - Search Dropdown (Visible Only XS) -->
-			<li class="nav-item dropdown no-arrow d-sm-none">
-				<a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					<i class="fas fa-search fa-fw"></i>
-				</a>
-			</li>
-			
-			
 			<!-- Nav Item - User Information -->
 			<li class="nav-item dropdown no-arrow">
 				<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -66,30 +46,36 @@
 					<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 						<tbody>
 							<tr>
-								<th>Team A (Auto-complete from available teams)</th>
+								<th>Team A</th>
 								<td>
-                                    {!! Form::select('id_list[]', $teams, null, ['id' => 'teams', 'class' => 'form-control']) !!}
+                                    {!! Form::select('team_a_id_list[]', $teams_a, null, ['id' => 'teams_a', 'class' => 'form-control', 'style' => 'width:100%']) !!}
                                 </td>
 							</tr>
 							<tr>
-								<th>Team B (Auto-complete from available teams)</th>
-								<td><input type="text" style="width:100%;"></td>
+								<th>Team B</th>
+								<td>
+                                    {!! Form::select('team_b_id_list[]', $teams_b, null, ['id' => 'teams_b', 'class' => 'form-control', 'style' => 'width:100%']) !!}
+                                </td>
 							</tr>
 							<tr>
-								<th>Channels (Auto-complete from available channels)</th>
-								<td><input type="text" style="width:100%;"></td>
+								<th>Channels</th>
+								<td>{!! Form::select('channel_id_list[]', $channels, null, ['id' => 'channels', 'multiple' => 'multiple', 'class' => 'form-control', 'style' => 'width:100%']) !!}</td>
 							</tr>
 							<tr>
-								<th>Competition (Auto-complete from available competitions)</th>
-								<td><input type="text" style="width:100%;"></td>
+								<th>Competition</th>
+								<td>
+                                    {!! Form::select('competition_id_list[]', $competitions, null, ['id' => 'competitions', 'class' => 'form-control', 'style' => 'width:100%']) !!}
+                                </td>
 							</tr>
 							<tr>
 								<th>Round</th>
 								<td><input type="text" style="width:100%;"></td>
 							</tr>
 							<tr>
-								<th>Location (Auto-complete from available locations)</th>
-								<td><input type="text" style="width:100%;"></td>
+								<th>Location</th>
+								<td>
+                                    {!! Form::select('location_id_list[]', $locations, null, ['id' => 'locations', 'class' => 'form-control', 'style' => 'width:100%']) !!}
+                                </td>
 							</tr>
 							<tr>
 								<th>Start Date</th>
@@ -126,7 +112,11 @@
 
 @section('js')
 <script>
-    $('#teams').select2();
+    $('#teams_a').select2();
+    $('#teams_b').select2();
+    $('#channels').select2();
+    $('#competitions').select2();
+    $('#locations').select2();
     
 </script>
 <!--
