@@ -15,7 +15,6 @@ use Illuminate\Http\Request;
 
 class GameController extends Controller
 {
-    //
     public function index () {
       $games = Game::all();
       return view('dashboard.games', ['games' => $games]);

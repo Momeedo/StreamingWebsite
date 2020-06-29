@@ -37,7 +37,7 @@
 	<!-- Begin Page Content -->
 	<div class="container-fluid">
 		
-		<a href="add-competition.html" class="btn btn-success btn-icon-split" style="margin-bottom:20px;">
+		<a href="{{ url('manage/competitions/new') }}" class="btn btn-success btn-icon-split" style="margin-bottom:20px;">
 			<span class="icon text-white-50">
 				<i class="fas fa-plus-square"></i>
 			</span>

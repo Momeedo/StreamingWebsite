@@ -55,7 +55,7 @@
 								<th>Country</th>
 								<th>Type</th>
 								<th>Link</th>
-								<th>Message</th>
+								<th style="min-width: 300px;">Message</th>
 								<th>Read?</th>
 								<th style="min-width: 100px;">Mark as Read</th>
 								<th>Delete</th>

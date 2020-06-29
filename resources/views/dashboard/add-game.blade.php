@@ -42,7 +42,7 @@
 			</div>
 			<div class="card-body">
 				<div class="table-responsive">
-	    	{!! Form::open(['method' => 'POST', 'id' => 'addForm' ]) !!}
+                    {!! Form::open(['method' => 'POST', 'id' => 'addForm' ]) !!}
 					<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 						<tbody>
 							<tr>
@@ -119,16 +119,4 @@
     $('#locations').select2();
     
 </script>
-<!--
-<script type="text/javascript">
-    var path = "{{ route('game_autocomplete') }}";
-    $('input.typeahead').typeahead({
-        source:  function (query, process) {
-        return $.get(path, { query: query }, function (data) {
-                return process(data);
-            });
-        }
-    });
-</script>
-        -->
 @endsection
