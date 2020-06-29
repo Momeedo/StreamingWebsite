@@ -49,9 +49,12 @@
 										<img src="images/resources/user-img.png" alt="">
 									</div>
 									<div class="account-menu">
+                                        @auth
 										<h4>USER <span class="usr-status">Online</span></h4>
+                                        @endauth
 										<div class="sd_menu">
 											<ul class="mm_menu">
+                                                @guest
 												<li>
 													<span>
 														<i class="icon-user"></i>
@@ -64,12 +67,15 @@
 													</span>
 													<a href="{{ url('register') }}" title="">Register</a>
 												</li>
+                                                @endguest
+                                                @auth
 												<li>
 													<span>
 														<i class="icon-logout"></i>
 													</span>
 													<a href="{{ url('logout') }}" title="">Sign out</a>
 												</li>
+                                                @endauth
 											</ul>
 										</div><!--sd_menu end-->
 									</div>
