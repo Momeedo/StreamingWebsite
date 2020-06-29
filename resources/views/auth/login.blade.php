@@ -16,6 +16,7 @@
 		<div class="hd-lg">
 			<img src="images/logo.png" alt="">
 			<span>Log into your account</span>
+            <br><span style="font-size: 10px;">(You need to login to view channels)</span>
 		</div><!--hd-lg end-->
 		<div class="user-account-pr">
 			<form method="POST" action="{{ route('login') }}">

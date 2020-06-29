@@ -52,6 +52,9 @@
                                         @auth
 										<h4>USER <span class="usr-status">Online</span></h4>
                                         @endauth
+                                        @guest
+										<h4><span class="usr-status" style="background-color: #b83c3c;">Logged Out</span></h4>
+                                        @endguest
 										<div class="sd_menu">
 											<ul class="mm_menu">
                                                 @guest
