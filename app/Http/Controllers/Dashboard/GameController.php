@@ -21,13 +21,6 @@ class GameController extends Controller
       return view('dashboard.games', ['games' => $games]);
     }
     
-    /*
-    public function new(){
-      $team_list = Team::all()->pluck('title', 'title');
-			return view('dashboard.add-game', ['teams' => $team_list]);
-    }
-    */
-    
     public function create(){
         $teams_a = Team::orderBy('name', 'asc')->pluck('name', 'id');
         $teams_b = Team::orderBy('name', 'asc')->pluck('name', 'id');
@@ -36,15 +29,4 @@ class GameController extends Controller
         $locations = Location::orderBy('name', 'asc')->pluck('name', 'id');
         return view('dashboard.add-game', array('teams_a' => $teams_a, 'teams_b' => $teams_b, 'channels' => $channels, 'competitions' => $competitions, 'locations' => $locations));
     }
-    /*
-    public function autocomplete(Request $request)
-    {
-       $query = $request->input('query');
-        $data = Team::select("name")
-                ->where("name","LIKE","%{$query}%")
-                ->get();
-        // return response()->json($data);
-        echo "hi";
-    }
-    */
 }
