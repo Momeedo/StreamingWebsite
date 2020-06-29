@@ -37,4 +37,7 @@ Route::get('/contact', 'Front\ContactController@index');
 Route::get('/games', 'Front\GameController@index');
 Route::get('/channels', 'Front\ChannelController@index');
 
+//Test Puroposes
+Route::get('/channel', 'Front\ChannelController@channel')->middleware('auth');;
+
 Route::get('logout', 'Auth\LoginController@logout');

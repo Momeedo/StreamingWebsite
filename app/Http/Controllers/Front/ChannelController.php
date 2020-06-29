@@ -10,4 +10,9 @@ class ChannelController extends Controller
     public function index () {
       return view('front.channels');
     }
+    
+    //Test Purposes
+    public function channel () {
+      return view('front.channel-page');
+    }
 }
