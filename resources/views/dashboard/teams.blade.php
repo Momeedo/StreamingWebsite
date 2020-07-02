@@ -85,7 +85,7 @@
 								<td><i class="fas fa-check-circle" style="color:#1cc88a;"></i></td>
 								<td> 
 									<div class="text-center">
-										<a href="#" class="btn btn-primary btn-icon-split">
+										<a href="{{url('manage/teams/edit/'.$team->id)}}" class="btn btn-primary btn-icon-split">
 											<span class="icon text-white-50">
 												<i class="fas fa-edit"></i>
 											</span>

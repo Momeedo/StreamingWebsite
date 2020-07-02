@@ -24,12 +24,14 @@ Route::group(['prefix' => 'manage', 'middleware' => 'admin'], function () {
     Route::get('/channels/new', 'Dashboard\ChannelController@create');
     Route::get('/teams', 'Dashboard\TeamController@index');
     Route::get('/teams/new', 'Dashboard\TeamController@create');
+    Route::get('/teams/edit/{id}', 'Dashboard\TeamController@edit');
     Route::get('/locations', 'Dashboard\LocationController@index');
     Route::get('/locations/new', 'Dashboard\LocationController@create');
     Route::get('/competitions', 'Dashboard\CompetitionController@index');
     Route::get('/competitions/new', 'Dashboard\CompetitionController@create');
     Route::get('/messages', 'Dashboard\MessageController@index');
     Route::post('/team-create', 'Dashboard\TeamController@store')->name('team-create');
+    Route::post('/team-update/{id}', 'Dashboard\TeamController@update')->name('team-update');
     Route::post('/team-delete', 'Dashboard\TeamController@remove')->name('team-delete');
 });
 

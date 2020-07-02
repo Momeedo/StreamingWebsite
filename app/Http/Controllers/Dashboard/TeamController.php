@@ -40,8 +40,14 @@ class TeamController extends Controller
         Storage::putFileAs('uploads/logos', $logo, $file_name);
         Image::make($logo)->fit(400,400)->encode('png', 70)->save('uploads/logos/'.$file_name.'.png');
         $team->logo = $file_name.'.png';
-        $team->save();
-        return redirect('manage/teams');
+        if ($team->save())
+        {
+            return redirect('manage/teams');
+        }
+        else
+        {
+            return response()->json(['result' => 'fail', 'code' => 400]);
+        }
     }
 
     public function remove (Request $request) {
@@ -54,5 +60,40 @@ class TeamController extends Controller
 				}else{
 				return response()->json(['result' => 'fail', 'code' => 400]);
 			}
+    }
+    
+    public function edit($id) {
+        $team = Team::find($id);
+        return view('dashboard.edit-team')->with('team', $team);;
+        
+    }
+    
+    public function update(Request $request, $id){
+        request()->validate([
+        'name' => 'required',
+        'country' => 'required',
+        ]);
+        
+        $team = Team::find($id);
+        $team->name = $request->name;
+        $team->country = $request->country;
+        
+        $logo = $request->file('logo');
+        if ($logo){
+            File::delete('uploads/logos/'.$team->logo);
+            $file_name = 'team_'.$team->name.'_'.uniqid();
+            Storage::putFileAs('uploads/logos', $logo, $file_name);
+            Image::make($logo)->fit(400,400)->encode('png', 70)->save('uploads/logos/'.$file_name.'.png');
+            $team->logo = $file_name.'.png';
+        }
+        if ($team->save())
+        {
+            return redirect('manage/teams');
+        }
+        else
+        {
+            return response()->json(['result' => 'fail', 'code' => 400]);
+        }
+        
     }
 }

@@ -61,34 +61,34 @@
 		<!-- DataTales Example -->
 		<div class="card shadow mb-4">
 			<div class="card-header py-3">
-				<h6 class="m-0 font-weight-bold text-primary">Add a New Team</h6>
+				<h6 class="m-0 font-weight-bold text-primary">Edit Team</h6>
 			</div>
 			<div class="card-body">
 				<div class="table-responsive">
 					<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 						<tbody>
-              <form method="post" action="{{ route('team-create') }}" enctype="multipart/form-data">
+              <form method="post" action="{{ route('team-update', $team->id) }}" enctype="multipart/form-data">
                 @csrf
                 @method('POST')
                 <tr>
                   <th>Team Name</th>
-                  <td><input type="text" style="width:100%;" name="name"></td>
+                  <td><input type="text" style="width:100%;" name="name" value="{{old('name', $team->name)}}"></td>
                 </tr>
                 <tr>
                   <th>Country</th>
-                  <td><input type="text" style="width:100%;" name="country"></td>
+                  <td><input type="text" style="width:100%;" name="country" value="{{old('country', $team->country)}}"></td>
                 </tr>
                 <tr>
                   <th>Logo</th>
-                  <td><input type="file" style="width:100%;" name="logo"></td>
+                  <td><img style="width:20%;padding-right:10px;" src="/uploads/logos/{{old('logo', $team->logo)}}"><input type="file" style="width:80%;" name="logo"></td>
                 </tr>
                 <tr >
                   <td colspan="3">
-                    <button class="btn btn-success btn-icon-split" type="submit" value="add">
+                    <button class="btn btn-success btn-icon-split" type="submit" value="Edit">
                     <span class="icon text-white-50">
                         <i class="fas fa-plus-square"></i>
                       </span>
-                      <span class="text">Add</span>
+                      <span class="text">Edit</span>
                     </button>
                   </td>
                 </tr>
