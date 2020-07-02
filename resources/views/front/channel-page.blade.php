@@ -3,7 +3,7 @@
 <section class="mn-sec full_wdth_single_video">
 	<div class="container">
 		<div class="vid-pr">
-			<iframe SRC="https://stream.tn/embed-lpw50bllmng7.html" FRAMEBORDER=0 MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=NO WIDTH=100% HEIGHT=100% allowfullscreen></iframe>
+			<iframe SRC="https://stream.tn/embed-tzyiclcsb2zy.html" FRAMEBORDER=0 MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=NO WIDTH=100% HEIGHT=100% allowfullscreen></iframe>
 		</div><!--vid-pr end-->
 		<div class="row">
 			<div class="col-lg-9">

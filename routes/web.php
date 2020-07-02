@@ -28,7 +28,7 @@ Route::group(['prefix' => 'manage', 'middleware' => 'admin'], function () {
     Route::get('/competitions', 'Dashboard\CompetitionController@index');
     Route::get('/competitions/new', 'Dashboard\CompetitionController@create');
     Route::get('/messages', 'Dashboard\MessageController@index');
-
+    Route::post('/team-create', 'Dashboard\TeamController@store')->name('team-create');
 });
 
 Route::get('/', 'Front\HomeController@index');

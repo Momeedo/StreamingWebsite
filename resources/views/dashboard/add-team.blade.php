@@ -67,17 +67,20 @@
 				<div class="table-responsive">
 					<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 						<tbody>
+                            <form method="post" action="{{ route('team-create') }}" enctype="multipart/form-data">
+                            @csrf
+                                @method('POST')
 							<tr>
 								<th>Team Name</th>
-								<td><input type="text" style="width:100%;"></td>
+								<td><input type="text" style="width:100%;" name="name"></td>
 							</tr>
 							<tr>
 								<th>Country</th>
-								<td><input type="text" style="width:100%;"></td>
+								<td><input type="text" style="width:100%;" name="country"></td>
 							</tr>
 							<tr>
 								<th>Logo (Save file as: team_id_logo)</th>
-								<td><input type="file" style="width:100%;"></td>
+								<td><input type="file" style="width:100%;" name="logo"></td>
 							</tr>
 							<tr >
 								<td colspan="3">
@@ -87,8 +90,10 @@
 										</span>
 										<span class="text">Add</span>
 									</a>
+                                    <button type="submit" value="add">Add</button>
 								</td>
 							</tr>
+                            </form>
 						</tbody>
 					</table>
 				</div>
