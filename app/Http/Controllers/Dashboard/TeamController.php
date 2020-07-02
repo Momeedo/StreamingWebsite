@@ -41,5 +41,18 @@ class TeamController extends Controller
         Image::make($logo)->fit(400,400)->encode('png', 70)->save('uploads/logos/'.$file_name.'.png');
         $team->logo = $file_name.'.png';
         $team->save();
+        return redirect('manage/teams');
+    }
+
+    public function remove (Request $request) {
+      $id = $request->get('id');
+      $team = Team::find($id);
+      Game::where('team_a_id', $id)->delete();
+      Game::where('team_b_id', $id)->delete();
+      if($team->delete()){
+				return response()->json(['result' => 'success', 'code' => 200]);
+				}else{
+				return response()->json(['result' => 'fail', 'code' => 400]);
+			}
     }
 }

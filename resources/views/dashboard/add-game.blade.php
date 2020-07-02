@@ -42,20 +42,20 @@
 			</div>
 			<div class="card-body">
 				<div class="table-responsive">
-                    {!! Form::open(['method' => 'POST', 'id' => 'addForm' ]) !!}
+        {!! Form::open(['action' => 'Dashboard\GameController@save', 'method' => 'POST', 'id' => 'addForm' ]) !!}
 					<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 						<tbody>
 							<tr>
 								<th>Team A</th>
 								<td>
-                                    {!! Form::select('team_a_id_list[]', $teams_a, null, ['id' => 'teams_a', 'class' => 'form-control', 'style' => 'width:100%']) !!}
-                                </td>
+                    {!! Form::select('team_a_id', $teams_a, null, ['id' => 'teams_a', 'class' => 'form-control', 'style' => 'width:100%']) !!}
+                </td>
 							</tr>
 							<tr>
 								<th>Team B</th>
 								<td>
-                                    {!! Form::select('team_b_id_list[]', $teams_b, null, ['id' => 'teams_b', 'class' => 'form-control', 'style' => 'width:100%']) !!}
-                                </td>
+                    {!! Form::select('team_b_id', $teams_b, null, ['id' => 'teams_b', 'class' => 'form-control', 'style' => 'width:100%']) !!}
+                </td>
 							</tr>
 							<tr>
 								<th>Channels</th>
@@ -64,39 +64,45 @@
 							<tr>
 								<th>Competition</th>
 								<td>
-                                    {!! Form::select('competition_id_list[]', $competitions, null, ['id' => 'competitions', 'class' => 'form-control', 'style' => 'width:100%']) !!}
-                                </td>
+                    {!! Form::select('competition_id', $competitions, null, ['id' => 'competitions', 'class' => 'form-control', 'style' => 'width:100%']) !!}
+                </td>
 							</tr>
 							<tr>
 								<th>Round</th>
-								<td><input type="text" style="width:100%;"></td>
+								<td>
+                {!! Form::text('round', '', ['id' => 'round', 'class' => 'form-control', 'style' => 'width:100%']) !!}
+                </td>
 							</tr>
 							<tr>
 								<th>Location</th>
 								<td>
-                                    {!! Form::select('location_id_list[]', $locations, null, ['id' => 'locations', 'class' => 'form-control', 'style' => 'width:100%']) !!}
-                                </td>
+                    {!! Form::select('location_id', $locations, null, ['id' => 'locations', 'class' => 'form-control', 'style' => 'width:100%']) !!}
+                </td>
 							</tr>
 							<tr>
 								<th>Start Date</th>
 								<td style="min-width:70%;">
-								<div><input type='text' class="form-control" id='datetimepickerstart'/></div>
+								<div>
+                {{ Form::input('dateTime-local', 'startDate', null, array('class' => 'form-control')) }}
+                </div>
 						</td>
 					</tr>
 					<tr>
 						<th>End Date (If left NULL, this = Start Date +2 hours)</th>
 						<td style="min-width:70%;">
-							<div class="input-group"><input type='text' class="form-control" id='datetimepickerend'/></div>
+							<div class="input-group">
+              {{ Form::input('dateTime-local', 'endDate', null, array('class' => 'form-control')) }}
+              </div>
 						</td>
 					</tr>
 					<tr>
 						<td colspan="8">
-							<a href="#" class="btn btn-success btn-icon-split" style="margin-bottom:20px;">
+							<button type="submit" href="#" class="btn btn-success btn-icon-split" style="margin-bottom:20px;">
 								<span class="icon text-white-50">
 									<i class="fas fa-plus-square"></i>
 								</span>
 								<span class="text">Add</span>
-							</a>
+							</button >
 						</td>
 					</tr>
 				</tbody>

@@ -100,9 +100,9 @@
                 </td>
 								<td><img width="20px" src="{{$game->teamA->logo}}"> {{$game->teamA->name}}</td>
 								<td><img width="20px" src="{{$game->teamB->logo}}"> {{$game->teamB->name}}</td>
-								<td>{{$game->competition->name}}</td>
+								<td>{{$game->competition}}</td>
 								<td>{{$game->round}}</td>
-								<td>{{$game->location->name}}</td>
+								<td>{{$game->location}}</td>
 								<td>{{$game->start_date}}</td>
 								<td>{{$game->end_date}}</td>
 								<td> 

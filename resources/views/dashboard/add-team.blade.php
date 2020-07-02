@@ -67,33 +67,32 @@
 				<div class="table-responsive">
 					<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 						<tbody>
-                            <form method="post" action="{{ route('team-create') }}" enctype="multipart/form-data">
-                            @csrf
-                                @method('POST')
-							<tr>
-								<th>Team Name</th>
-								<td><input type="text" style="width:100%;" name="name"></td>
-							</tr>
-							<tr>
-								<th>Country</th>
-								<td><input type="text" style="width:100%;" name="country"></td>
-							</tr>
-							<tr>
-								<th>Logo (Save file as: team_id_logo)</th>
-								<td><input type="file" style="width:100%;" name="logo"></td>
-							</tr>
-							<tr >
-								<td colspan="3">
-									<a href="#" class="btn btn-success btn-icon-split" style="margin-bottom:20px;">
-										<span class="icon text-white-50">
-											<i class="fas fa-plus-square"></i>
-										</span>
-										<span class="text">Add</span>
-									</a>
-                                    <button type="submit" value="add">Add</button>
-								</td>
-							</tr>
-                            </form>
+              <form method="post" action="{{ route('team-create') }}" enctype="multipart/form-data">
+                @csrf
+                @method('POST')
+                <tr>
+                  <th>Team Name</th>
+                  <td><input type="text" style="width:100%;" name="name"></td>
+                </tr>
+                <tr>
+                  <th>Country</th>
+                  <td><input type="text" style="width:100%;" name="country"></td>
+                </tr>
+                <tr>
+                  <th>Logo (Save file as: team_id_logo)</th>
+                  <td><input type="file" style="width:100%;" name="logo"></td>
+                </tr>
+                <tr >
+                  <td colspan="3">
+                    <button class="btn btn-success btn-icon-split" type="submit" value="add">
+                    <span class="icon text-white-50">
+                        <i class="fas fa-plus-square"></i>
+                      </span>
+                      <span class="text">Add</span>
+                    </button>
+                  </td>
+                </tr>
+              </form>
 						</tbody>
 					</table>
 				</div>
@@ -107,5 +106,9 @@
 	<!-- /.container-fluid -->
 	
 </div>
+
+@section('js')
+<script></script>
+@endsection
 <!-- End of Main Content -->
 @endsection

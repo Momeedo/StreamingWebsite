@@ -75,11 +75,13 @@
 							</tr>
 						</tfoot>
 						<tbody>
-							<tr>
-								<td>5</td>
-								<td><img width="50px" src="https://upload.wikimedia.org/wikipedia/sco/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png"></td>
-								<td>FC Barcelona</td>
-								<td>Spain</td>
+            @foreach($teams as $team)
+							<tr id="team_{{$team->id}}">
+								<td>{{$team->id}}</td>
+								<td>
+                <img width="50px" src="{{url('/uploads/logos')}}/{{$team->logo}}"></td>
+								<td>{{$team->name}}</td>
+								<td>{{$team->country}}</td>
 								<td><i class="fas fa-check-circle" style="color:#1cc88a;"></i></td>
 								<td> 
 									<div class="text-center">
@@ -92,7 +94,7 @@
 								</td>
 								<td> 
 									<div class="text-center">
-										<a href="#" class="btn btn-danger btn-icon-split" data-toggle="modal" data-target="#deleteModal">
+										<a href="#" class="btn btn-danger btn-icon-split" onclick="toggleDelete({{$team->id}})" data-toggle="modal" data-target="#deleteModal">
 											<span class="icon text-white-50">
 												<i class="fas fa-trash"></i>
 											</span>
@@ -100,33 +102,7 @@
 									</div>
 								</td>
 							</tr>
-							
-							<tr>
-								<td>7</td>
-								<td><img width="50px" src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/1200px-Real_Madrid_CF.svg.png"></td>
-								<td>Real Madrid FC</td>
-								<td>Spain</td>
-								<td><i class="fas fa-times-circle" style="color:#e74a3b;"></i></td>
-								<td> 
-									<div class="text-center">
-										<a href="#" class="btn btn-primary btn-icon-split">
-											<span class="icon text-white-50">
-												<i class="fas fa-edit"></i>
-											</span>
-										</a> 
-									</div>
-								</td>
-								<td> 
-									<div class="text-center">
-										<a href="#" class="btn btn-danger btn-icon-split" data-toggle="modal" data-target="#deleteModal">
-											<span class="icon text-white-50">
-												<i class="fas fa-trash"></i>
-											</span>
-										</a> 
-									</div>
-								</td>
-							</tr>	
-							
+            @endforeach
 						</tbody>
 					</table>
 				</div>
@@ -138,5 +114,56 @@
 	<!-- /.container-fluid -->
 	
 </div>
+
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirm action</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="cancelDelete()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="confirmDelete()">Yes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="cancelDelete()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+@section('js')
+<script>
+  let toDelete = -1;
+  function toggleDelete(id) {
+    toDelete = id 
+  }
+
+  function confirmDelete () {
+    $.ajax({
+      beforeSend: function (xhr) {
+        xhr.setRequestHeader('X-CSRF-TOKEN', $('meta[name="csrf-token"]').attr('content'))
+      },
+      method: "POST",
+      url: '/manage/team-delete',
+      data: {
+        id: toDelete
+      },
+      success: function (data) {
+        document.querySelector(`#team_${toDelete}`).remove()
+      },
+      error: function (err) {
+        alert('There was an error, please try later!')
+      }
+    })
+  }
+  function cancelDelete () {
+    toDelete = -1
+  }
+</script>
+@endsection
 <!-- End of Main Content -->
 @endsection

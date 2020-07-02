@@ -19,6 +19,7 @@ Route::group(['prefix' => 'manage', 'middleware' => 'admin'], function () {
     Route::get('/', 'Dashboard\DashboardController@index');
     Route::get('/games', 'Dashboard\GameController@index');
     Route::get('/games/new', 'Dashboard\GameController@create');
+    Route::post('/games/save', 'Dashboard\GameController@save');
     Route::get('/channels', 'Dashboard\ChannelController@index');
     Route::get('/channels/new', 'Dashboard\ChannelController@create');
     Route::get('/teams', 'Dashboard\TeamController@index');
@@ -29,6 +30,7 @@ Route::group(['prefix' => 'manage', 'middleware' => 'admin'], function () {
     Route::get('/competitions/new', 'Dashboard\CompetitionController@create');
     Route::get('/messages', 'Dashboard\MessageController@index');
     Route::post('/team-create', 'Dashboard\TeamController@store')->name('team-create');
+    Route::post('/team-delete', 'Dashboard\TeamController@remove')->name('team-delete');
 });
 
 Route::get('/', 'Front\HomeController@index');
