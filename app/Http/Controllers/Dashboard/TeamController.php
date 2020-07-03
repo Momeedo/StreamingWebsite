@@ -17,7 +17,19 @@ class TeamController extends Controller
 {
     public function index () {
       $teams = Team::all();
-      return view('dashboard.teams', ['teams' => $teams]);
+      $time_now = date("Y-m-d H:i:s");
+      $from = date("Y-m-d H:i:s", strtotime('-8 hours'));
+      $to = date("Y-m-d H:i:s", strtotime('+8 hours'));
+      $games = Game::whereBetween('start_date', [$from, $to])->get();
+      
+      $teams_with_a_game_now = array();
+      foreach ($games as $game) {
+          if (($game->start_date < $time_now) && ($time_now < $game->end_date)){
+              array_push($teams_with_a_game_now, $game->team_a_id);
+              array_push($teams_with_a_game_now, $game->team_b_id);
+          }
+      }
+      return view('dashboard.teams', ['teams' => $teams, 'teams_with_a_game_now' => $teams_with_a_game_now]);
     }
     
     public function create(){

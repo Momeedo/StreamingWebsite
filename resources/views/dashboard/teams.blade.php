@@ -82,7 +82,13 @@
                 <img width="50px" src="{{url('/uploads/logos')}}/{{$team->logo}}"></td>
 								<td>{{$team->name}}</td>
 								<td>{{$team->country}}</td>
-								<td><i class="fas fa-check-circle" style="color:#1cc88a;"></i></td>
+								<td>
+                                    @if (in_array ($team->id, $teams_with_a_game_now))
+                                    <i class="fas fa-check-circle" style="color:#1cc88a;"></i>
+                                    @else
+                                    <i class="fas fa-times-circle" style="color:#e74a3b;"></i>
+                                    @endif
+                                </td>
 								<td> 
 									<div class="text-center">
 										<a href="{{url('manage/teams/edit/'.$team->id)}}" class="btn btn-primary btn-icon-split">
