@@ -25,6 +25,8 @@ Route::group(['prefix' => 'manage', 'middleware' => 'admin'], function () {
     Route::get('/teams', 'Dashboard\TeamController@index');
     Route::get('/teams/new', 'Dashboard\TeamController@create');
     Route::get('/teams/edit/{id}', 'Dashboard\TeamController@edit');
+    Route::get('/locations/edit/{id}', 'Dashboard\LocationController@edit');
+    Route::get('/competitions/edit/{id}', 'Dashboard\CompetitionController@edit');
     Route::get('/locations', 'Dashboard\LocationController@index');
     Route::get('/locations/new', 'Dashboard\LocationController@create');
     Route::get('/competitions', 'Dashboard\CompetitionController@index');
@@ -33,6 +35,12 @@ Route::group(['prefix' => 'manage', 'middleware' => 'admin'], function () {
     Route::post('/team-create', 'Dashboard\TeamController@store')->name('team-create');
     Route::post('/team-update/{id}', 'Dashboard\TeamController@update')->name('team-update');
     Route::post('/team-delete', 'Dashboard\TeamController@remove')->name('team-delete');
+    Route::post('/location-create', 'Dashboard\LocationController@store')->name('location-create');
+    Route::post('/location-update/{id}', 'Dashboard\LocationController@update')->name('location-update');
+    Route::post('/location-delete', 'Dashboard\LocationController@remove')->name('location-delete');
+    Route::post('/competition-create', 'Dashboard\CompetitionController@store')->name('competition-create');
+    Route::post('/competition-update/{id}', 'Dashboard\CompetitionController@update')->name('competition-update');
+    Route::post('/competition-delete', 'Dashboard\CompetitionController@remove')->name('competition-delete');
 });
 
 Route::get('/', 'Front\HomeController@index');

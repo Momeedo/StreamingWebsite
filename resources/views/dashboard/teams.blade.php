@@ -142,6 +142,9 @@
 </div>
 
 @section('js')
+		<script src="{{ asset('/dashboard/vendor/datatables/jquery.dataTables.min.js') }}"></script>
+		<script src="{{ asset('/dashboard/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
+		<script src="{{ asset('/dashboard/js/demo/datatables-demo.js') }}"></script>
 <script>
   let toDelete = -1;
   function toggleDelete(id) {

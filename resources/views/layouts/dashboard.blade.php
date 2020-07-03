@@ -157,12 +157,13 @@
 		<!-- Custom scripts for all pages-->
 		<script src="{{ asset('/dashboard/js/sb-admin-2.min.js') }}"></script>
 		<!-- Page level plugins -->
-		<script src="{{ asset('/dashboard/vendor/chart.js/Chart.min.js') }}"></script>
+		<!--<script src="{{ asset('/dashboard/vendor/chart.js/Chart.min.js') }}"></script>-->
 		<!-- Page level custom scripts -->
-		<script src="{{ asset('/dashboard/js/demo/chart-area-demo.js') }}"></script>
+		<!--
+        <script src="{{ asset('/dashboard/js/demo/chart-area-demo.js') }}"></script>
 		<script src="{{ asset('/dashboard/js/demo/chart-pie-demo.js') }}"></script>
+        -->
 		<script src="{{ asset('/dashboard/vendor/bootstrap-select2/select2.min.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
     @yield('js')
 		
 	</body>

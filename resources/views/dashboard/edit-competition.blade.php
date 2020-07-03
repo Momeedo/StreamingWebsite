@@ -41,30 +41,30 @@
 		<!-- DataTales Example -->
 		<div class="card shadow mb-4">
 			<div class="card-header py-3">
-				<h6 class="m-0 font-weight-bold text-primary">Add a New Competition</h6>
+				<h6 class="m-0 font-weight-bold text-primary">Edit {{old('name', $competition->name)}}</h6>
 			</div>
 			<div class="card-body">
 				<div class="table-responsive">
 					<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 						<tbody>
-                          <form method="post" action="{{ route('competition-create') }}" enctype="multipart/form-data">
+                          <form method="post" action="{{ route('competition-update', $competition->id) }}" enctype="multipart/form-data">
                             @csrf
                             @method('POST')
 							<tr>
 								<th>Competition Name</th>
-								<td><input type="text" style="width:100%;" name="name"></td>
+								<td><input type="text" style="width:100%;" name="name" value="{{old('name', $competition->name)}}"></td>
 							</tr>
 							<tr>
 								<th>Country/Continent</th>
-								<td><input type="text" style="width:100%;" name="country"></td>
+								<td><input type="text" style="width:100%;" name="country" value="{{old('name', $competition->name)}}"></td>
 							</tr>
 							<tr>
 								<th>Sport</th>
 								<td>
 									<select name="sport" id="sports" style="width:100%;">
-										<option value="Basketball">Basketball</option>
-										<option value="Football">Football</option>
-										<option value="Handball">Handball</option>
+										<option {{ $competition->sport == 'Basketball' ? 'selected' : '' }} value="Basketball">Basketball</option>
+										<option {{ $competition->sport == 'Football' ? 'selected' : '' }} value="Football">Football</option>
+										<option {{ $competition->sport == 'Handball' ? 'selected' : '' }} value="Handball">Handball</option>
 									</select>
 								</td>
 							</tr>
@@ -73,15 +73,15 @@
 									<th>Type</th>
 									<td>
 										<select name="type" id="types" style="width:100%;">
-											<option value="Championship">Championship</option>
-											<option value="Cup">Cup</option>
-											<option value="Friendly">Friendly</option>
+											<option {{ $competition->type == 'Championship' ? 'selected' : '' }} value="Championship">Championship</option>
+											<option {{ $competition->type == 'Cup' ? 'selected' : '' }} value="Cup">Cup</option>
+											<option {{ $competition->type == 'Friendly' ? 'selected' : '' }} value="Friendly">Friendly</option>
 										</select>
 									</td>
 								</tr>
 								<tr>
 									<th>Logo</th>
-									<td><input type="file" style="width:100%;" name="logo"></td>
+									<td><img style="width:20%;padding-right:10px;" src="/uploads/competitions/{{old('logo', $competition->logo)}}"><input type="file" style="width:80%;" name="logo"></td>
 								</tr>
 								<tr >
 									<td colspan="5">
@@ -89,7 +89,7 @@
 											<span class="icon text-white-50">
 												<i class="fas fa-plus-square"></i>
 											</span>
-											<span class="text">Add</span>
+											<span class="text">Edit</span>
 										</button>
 									</td>
 								</tr>

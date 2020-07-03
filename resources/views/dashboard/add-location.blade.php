@@ -40,38 +40,42 @@
 		<!-- DataTales Example -->
 		<div class="card shadow mb-4">
 			<div class="card-header py-3">
-				<h6 class="m-0 font-weight-bold text-primary">Add a New Game</h6>
+				<h6 class="m-0 font-weight-bold text-primary">Add a New Location</h6>
 			</div>
 			<div class="card-body">
 				<div class="table-responsive">
 					<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 						<tbody>
+                          <form method="post" action="{{ route('location-create') }}" enctype="multipart/form-data">
+                            @csrf
+                            @method('POST')
 							<tr>
 								<th>Stadium Name</th>
-								<td><input type="text" style="width:100%;"></td>
+								<td><input type="text" style="width:100%;" name="name"></td>
 							</tr>
 							<tr>
 								<th>Town</th>
-								<td><input type="text" style="width:100%;"></td>
+								<td><input type="text" style="width:100%;" name="town"></td>
 							</tr>
 							<tr>
 								<th>Country</th>
-								<td><input type="text" style="width:100%;"></td>
+								<td><input type="text" style="width:100%;" name="country"></td>
 							</tr>
 							<tr>
-								<th>Preview (Save file as: location_id_preview)</th>
-								<td><input type="file" style="width:100%;"></td>
+								<th>Preview</th>
+								<td><input type="file" style="width:100%;" name="image"></td>
 							</tr>
 							<tr >
 								<td colspan="3">
-									<a href="#" class="btn btn-success btn-icon-split" style="margin-bottom:20px;">
+									<button type="submit" class="btn btn-success btn-icon-split" style="margin-bottom:20px;">
 										<span class="icon text-white-50">
 											<i class="fas fa-plus-square"></i>
 										</span>
 										<span class="text">Add</span>
-									</a>
+									</button>
 								</td>
 							</tr>
+                            </form>
 						</tbody>
 					</table>
 				</div>

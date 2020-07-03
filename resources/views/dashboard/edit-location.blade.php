@@ -11,7 +11,6 @@
 			<i class="fa fa-bars"></i>
 		</button>
 		
-		
 		<!-- Topbar Navbar -->
 		<ul class="navbar-nav ml-auto">
 			<!-- Nav Item - User Information -->
@@ -41,69 +40,54 @@
 		<!-- DataTales Example -->
 		<div class="card shadow mb-4">
 			<div class="card-header py-3">
-				<h6 class="m-0 font-weight-bold text-primary">Add a New Competition</h6>
+				<h6 class="m-0 font-weight-bold text-primary">Edit {{old('name', $location->name)}}</h6>
 			</div>
 			<div class="card-body">
 				<div class="table-responsive">
 					<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 						<tbody>
-                          <form method="post" action="{{ route('competition-create') }}" enctype="multipart/form-data">
+                          <form method="post" action="{{ route('location-update', $location->id) }}" enctype="multipart/form-data">
                             @csrf
                             @method('POST')
 							<tr>
-								<th>Competition Name</th>
-								<td><input type="text" style="width:100%;" name="name"></td>
+								<th>Stadium Name</th>
+								<td><input type="text" style="width:100%;" name="name" value="{{old('name', $location->name)}}"></td>
 							</tr>
 							<tr>
-								<th>Country/Continent</th>
-								<td><input type="text" style="width:100%;" name="country"></td>
+								<th>Town</th>
+								<td><input type="text" style="width:100%;" name="town" value="{{old('town', $location->town)}}"></td>
 							</tr>
 							<tr>
-								<th>Sport</th>
-								<td>
-									<select name="sport" id="sports" style="width:100%;">
-										<option value="Basketball">Basketball</option>
-										<option value="Football">Football</option>
-										<option value="Handball">Handball</option>
-									</select>
+								<th>Country</th>
+								<td><input type="text" style="width:100%;" name="country" value="{{old('country', $location->country)}}"></td>
+							</tr>
+							<tr>
+								<th>Preview</th>
+								<td><img style="width:20%;padding-right:10px;" src="/uploads/locations/{{old('image', $location->image)}}"><input type="file" style="width:80%;" name="image"></td>
+							</tr>
+							<tr >
+								<td colspan="3">
+									<button type="submit" class="btn btn-success btn-icon-split" style="margin-bottom:20px;">
+										<span class="icon text-white-50">
+											<i class="fas fa-plus-square"></i>
+										</span>
+										<span class="text">Edit</span>
+									</button>
 								</td>
 							</tr>
-							<tr>
-								<tr>
-									<th>Type</th>
-									<td>
-										<select name="type" id="types" style="width:100%;">
-											<option value="Championship">Championship</option>
-											<option value="Cup">Cup</option>
-											<option value="Friendly">Friendly</option>
-										</select>
-									</td>
-								</tr>
-								<tr>
-									<th>Logo</th>
-									<td><input type="file" style="width:100%;" name="logo"></td>
-								</tr>
-								<tr >
-									<td colspan="5">
-										<button type="submit" class="btn btn-success btn-icon-split" style="margin-bottom:20px;">
-											<span class="icon text-white-50">
-												<i class="fas fa-plus-square"></i>
-											</span>
-											<span class="text">Add</span>
-										</button>
-									</td>
-								</tr>
                             </form>
-							</tbody>
-						</table>
-					</div>
+						</tbody>
+					</table>
 				</div>
-				
 			</div>
 			
 		</div>
-		<!-- /.container-fluid -->
 		
 	</div>
-	<!-- End of Main Content -->
+	
+	
+	<!-- /.container-fluid -->
+	
+</div>
+<!-- End of Main Content -->
 @endsection

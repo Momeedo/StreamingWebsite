@@ -50,7 +50,8 @@ class TeamController extends Controller
         $logo = $request->file('logo');
         $file_name = 'team_'.$team->name.'_'.uniqid();
         Storage::putFileAs('uploads/logos', $logo, $file_name);
-        Image::make($logo)->fit(400,400)->encode('png', 70)->save('uploads/logos/'.$file_name.'.png');
+        //Image::make($logo)->fit(400,400)->encode('png', 70)->save('uploads/logos/'.$file_name.'.png');
+        Image::make($logo)->encode('png', 70)->save('uploads/logos/'.$file_name.'.png');
         $team->logo = $file_name.'.png';
         if ($team->save())
         {
@@ -68,6 +69,7 @@ class TeamController extends Controller
       Game::where('team_a_id', $id)->delete();
       Game::where('team_b_id', $id)->delete();
       if($team->delete()){
+                File::delete('uploads/logos/'.$team->logo);
 				return response()->json(['result' => 'success', 'code' => 200]);
 				}else{
 				return response()->json(['result' => 'fail', 'code' => 400]);
@@ -92,14 +94,14 @@ class TeamController extends Controller
         
         $logo = $request->file('logo');
         if ($logo){
-            File::delete('uploads/logos/'.$team->logo);
             $file_name = 'team_'.$team->name.'_'.uniqid();
             Storage::putFileAs('uploads/logos', $logo, $file_name);
-            Image::make($logo)->fit(400,400)->encode('png', 70)->save('uploads/logos/'.$file_name.'.png');
+            Image::make($logo)->encode('png', 70)->save('uploads/logos/'.$file_name.'.png');
             $team->logo = $file_name.'.png';
         }
         if ($team->save())
         {
+            File::delete('uploads/logos/'.$team->logo);
             return redirect('manage/teams');
         }
         else
