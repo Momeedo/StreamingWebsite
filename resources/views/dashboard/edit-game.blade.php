@@ -93,15 +93,15 @@
                                 <th>Start Date</th>
                                 <td style="min-width:70%;">
                                     <div>
-                                        {{ Form::input('startDate', '', $game->start_date, array('class' => 'form-control', 'id' => 'startDate')) }}
+                                        <input class="form-control" id="startDate" type="text" name="startDate" value="{{old('start_date', $game->start_date)}}">
                                     </div>
                                 </td>
                             </tr>
                             <tr>
                                 <th>End Date</th>
                                 <td style="min-width:70%;">
-                                    <div class="input-group">
-                                        {{ Form::input('endDate', '', $game->end_date, array('class' => 'form-control', 'id' =>  'endDate')) }}
+                                    <div>
+                                        <input class="form-control" id="endDate" type="text" name="endDate" value="{{old('end_date', $game->end_date)}}">
                                     </div>
                                 </td>
                             </tr>
@@ -129,23 +129,6 @@
         @section('js')
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js" type="text/javascript"></script>
         <script src="{{ asset('/dashboard/js/bootstrap-datetimepicker.min.js') }}"></script>
-
-        <script type="text/javascript">
-            $(function() {
-                $('#startDate').datetimepicker({
-                    format: 'YYYY-MM-DD HH:mm',
-                    default: null
-                });
-            });
-        </script>
-        <script type="text/javascript">
-            $(function() {
-                $('#endDate').datetimepicker({
-                    format: 'YYYY-MM-DD HH:mm',
-                    default: null
-                });
-            });
-        </script>
         <script>
             $('#teams_a').select2();
             $('#teams_b').select2();

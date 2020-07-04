@@ -92,7 +92,7 @@
                                 <th>Start Date</th>
                                 <td style="min-width:70%;">
                                     <div>
-                                        {{ Form::input('startDate', '', null, array('class' => 'form-control', 'id' => 'startDate')) }}
+                                        <input class="form-control" id="startDate" type="text" name="startDate">
                                     </div>
                                 </td>
                             </tr>
@@ -100,7 +100,7 @@
                                 <th>End Date</th>
                                 <td style="min-width:70%;">
                                     <div class="input-group">
-                                        {{ Form::input('endDate', '', null, array('class' => 'form-control', 'id' =>  'endDate')) }}
+                                        <input class="form-control" id="endDate" type="text" name="endDate">
                                     </div>
                                 </td>
                             </tr>
@@ -128,21 +128,13 @@
         @section('js')
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js" type="text/javascript"></script>
         <script src="{{ asset('/dashboard/js/bootstrap-datetimepicker.min.js') }}"></script>
-
+        
         <script type="text/javascript">
             $(function() {
                 $('#startDate').datetimepicker({
                     format: 'YYYY-MM-DD HH:mm',
                     inline: true,
                     sideBySide: true
-                });
-            });
-        </script>
-        <script type="text/javascript">
-            $(function() {
-                $('#endDate').datetimepicker({
-                    format: 'YYYY-MM-DD HH:mm',
-                    default: null
                 });
             });
         </script>

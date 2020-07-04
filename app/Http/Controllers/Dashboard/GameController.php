@@ -58,7 +58,7 @@ class GameController extends Controller
     public function save(Request $request) {
         request()->validate([
         'round' => 'required',
-        'start_date' => 'required',
+        'startDate' => 'required',
         'channel_id_list' => 'required'
         ]);
       $game = new Game;
@@ -71,11 +71,11 @@ class GameController extends Controller
         //Check if endDate is filled, if not then add 2 hours to startDate
         if ($request->get('endDate'))
         {
-            $game->end_date = Carbon::parse($request->get('endDate'));
+            $game->end_date = Carbon::parse($request->get('endDate'))->format('Y-m-d H:i:s');
         }
         else
         {
-            $game->end_date = Carbon::parse($request->get('startDate'))->addHour(2);
+            $game->end_date = Carbon::parse($request->get('startDate'))->addHour(2)->format('Y-m-d H:i:s');
         }
         if ($game->save())
         {
@@ -96,7 +96,7 @@ class GameController extends Controller
     public function update(Request $request, $id){  
         request()->validate([
         'round' => 'required',
-        'start_date' => 'required',
+        'startDate' => 'required',
         'channel_id_list' => 'required'
         ]);
       $game = Game::find($id);
