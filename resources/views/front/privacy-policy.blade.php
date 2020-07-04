@@ -12,48 +12,152 @@
 		</div>					
 		<div class="form-separation"></div>
 		<div class="vidz_list">
-			<div style="width:100%;text-align:justify;">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas integer eget aliquet nibh praesent tristique magna. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Velit laoreet id donec ultrices tincidunt arcu. Volutpat maecenas volutpat blandit aliquam. Sed viverra ipsum nunc aliquet. Morbi tincidunt augue interdum velit euismod in pellentesque. Pharetra diam sit amet nisl. Varius duis at consectetur lorem. Enim nunc faucibus a pellentesque sit amet porttitor. Odio euismod lacinia at quis risus. Bibendum est ultricies integer quis auctor elit sed. Ut sem nulla pharetra diam sit amet. Nam aliquam sem et tortor consequat. Amet consectetur adipiscing elit duis tristique sollicitudin. Nisi vitae suscipit tellus mauris a diam maecenas. Sagittis purus sit amet volutpat consequat mauris nunc congue. Est ultricies integer quis auctor elit sed vulputate mi sit. Consequat id porta nibh venenatis cras sed felis eget.
-					
-					Dolor purus non enim praesent elementum facilisis leo vel. Purus in massa tempor nec feugiat. Maecenas accumsan lacus vel facilisis volutpat est velit egestas. Bibendum neque egestas congue quisque egestas diam in. Et malesuada fames ac turpis egestas maecenas pharetra convallis. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. Et malesuada fames ac turpis. Quisque non tellus orci ac auctor augue mauris augue. Lorem donec massa sapien faucibus et molestie ac. Neque aliquam vestibulum morbi blandit cursus risus at. Fermentum leo vel orci porta non pulvinar neque laoreet suspendisse. Mauris nunc congue nisi vitae suscipit tellus mauris. Adipiscing diam donec adipiscing tristique risus. Nulla porttitor massa id neque aliquam vestibulum. Diam quam nulla porttitor massa id neque. Faucibus a pellentesque sit amet. Ultrices gravida dictum fusce ut placerat orci. Ridiculus mus mauris vitae ultricies leo. Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis.
-					
-					A lacus vestibulum sed arcu non odio euismod lacinia. Sapien et ligula ullamcorper malesuada proin libero nunc consequat. Ultricies mi eget mauris pharetra et. Faucibus vitae aliquet nec ullamcorper. Magna sit amet purus gravida quis. Felis eget velit aliquet sagittis id consectetur. Amet est placerat in egestas erat imperdiet sed euismod. Commodo ullamcorper a lacus vestibulum. Pellentesque massa placerat duis ultricies. Congue eu consequat ac felis donec et odio pellentesque. Erat nam at lectus urna duis convallis.
-					
-					Neque viverra justo nec ultrices dui sapien eget mi. Laoreet id donec ultrices tincidunt. Hendrerit gravida rutrum quisque non tellus orci ac auctor augue. Lacus suspendisse faucibus interdum posuere. Sed tempus urna et pharetra pharetra massa massa ultricies. Pulvinar mattis nunc sed blandit. Viverra vitae congue eu consequat ac. Egestas egestas fringilla phasellus faucibus scelerisque eleifend. Amet purus gravida quis blandit turpis cursus. Malesuada proin libero nunc consequat interdum varius sit amet. Neque gravida in fermentum et sollicitudin. Eu non diam phasellus vestibulum lorem. Nunc id cursus metus aliquam eleifend mi. Amet consectetur adipiscing elit ut aliquam purus. Sed cras ornare arcu dui vivamus arcu. In mollis nunc sed id semper risus in. Semper risus in hendrerit gravida rutrum quisque non. Tempus iaculis urna id volutpat. Vitae aliquet nec ullamcorper sit amet risus. Eu volutpat odio facilisis mauris.
-					
-					Mus mauris vitae ultricies leo integer malesuada. Vitae justo eget magna fermentum iaculis eu non diam phasellus. Amet consectetur adipiscing elit pellentesque habitant. Erat imperdiet sed euismod nisi porta lorem mollis. Diam quis enim lobortis scelerisque fermentum dui faucibus. Fusce id velit ut tortor pretium viverra suspendisse. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Risus nec feugiat in fermentum posuere urna nec tincidunt praesent. Egestas maecenas pharetra convallis posuere morbi leo. Enim eu turpis egestas pretium aenean pharetra.
-					
-					Placerat vestibulum lectus mauris ultrices eros. Et tortor consequat id porta. Molestie a iaculis at erat pellentesque adipiscing. Duis ultricies lacus sed turpis tincidunt id aliquet. Lacinia quis vel eros donec ac odio tempor orci. Euismod quis viverra nibh cras pulvinar mattis nunc sed blandit. Enim facilisis gravida neque convallis. Diam phasellus vestibulum lorem sed. Id eu nisl nunc mi ipsum faucibus vitae. Elit ut aliquam purus sit amet luctus venenatis. Donec adipiscing tristique risus nec feugiat in fermentum posuere urna. Vel orci porta non pulvinar neque laoreet. Sem et tortor consequat id porta nibh venenatis cras. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Facilisi etiam dignissim diam quis. Bibendum ut tristique et egestas quis. Erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Purus viverra accumsan in nisl nisi scelerisque eu ultrices vitae.
-					
-					Cum sociis natoque penatibus et magnis dis. Velit aliquet sagittis id consectetur. Cursus risus at ultrices mi tempus imperdiet nulla malesuada. Augue ut lectus arcu bibendum at varius vel. Consequat id porta nibh venenatis cras sed felis eget. Et tortor consequat id porta. Ipsum faucibus vitae aliquet nec. Etiam dignissim diam quis enim lobortis. Placerat in egestas erat imperdiet sed. Congue nisi vitae suscipit tellus mauris a diam maecenas. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis. Egestas sed sed risus pretium quam. Posuere sollicitudin aliquam ultrices sagittis orci a. Sem fringilla ut morbi tincidunt augue interdum velit. Semper auctor neque vitae tempus quam pellentesque nec. Habitasse platea dictumst quisque sagittis purus sit amet volutpat consequat. Mi ipsum faucibus vitae aliquet. Aenean euismod elementum nisi quis eleifend quam.
-					
-					Ipsum dolor sit amet consectetur. Ullamcorper a lacus vestibulum sed. In ornare quam viverra orci sagittis. Ut sem viverra aliquet eget. Ultricies mi eget mauris pharetra et. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. Sagittis purus sit amet volutpat consequat mauris nunc. Praesent semper feugiat nibh sed pulvinar. A erat nam at lectus urna duis convallis convallis. Tellus id interdum velit laoreet id donec. Lobortis scelerisque fermentum dui faucibus in. Turpis egestas integer eget aliquet nibh praesent tristique magna. Et ultrices neque ornare aenean euismod elementum nisi quis eleifend. Non tellus orci ac auctor augue mauris augue neque. Magna ac placerat vestibulum lectus. Sit amet volutpat consequat mauris nunc congue nisi vitae. Nunc sed velit dignissim sodales ut eu sem integer.
-					
-					Enim ut sem viverra aliquet. Facilisis leo vel fringilla est ullamcorper eget. Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum integer. Sit amet mauris commodo quis. Justo laoreet sit amet cursus sit amet dictum sit. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Sagittis eu volutpat odio facilisis mauris sit amet massa. Malesuada fames ac turpis egestas sed tempus. Libero enim sed faucibus turpis in eu mi bibendum neque. Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum. Potenti nullam ac tortor vitae. Suspendisse sed nisi lacus sed viverra tellus in. Cursus vitae congue mauris rhoncus aenean vel elit. In hac habitasse platea dictumst vestibulum rhoncus. Elit duis tristique sollicitudin nibh sit amet commodo. Mollis nunc sed id semper. Elementum nibh tellus molestie nunc. Libero enim sed faucibus turpis in eu mi bibendum. Eu mi bibendum neque egestas.
-					
-					Risus quis varius quam quisque id diam vel quam. Et malesuada fames ac turpis egestas. Dictum sit amet justo donec enim diam vulputate ut pharetra. Mi proin sed libero enim sed faucibus turpis in eu. Ipsum dolor sit amet consectetur adipiscing elit ut aliquam. Molestie nunc non blandit massa enim. Blandit cursus risus at ultrices mi tempus imperdiet nulla. Cras sed felis eget velit aliquet. Nunc faucibus a pellentesque sit amet porttitor eget dolor. Arcu non sodales neque sodales ut etiam sit. Vitae congue eu consequat ac felis donec et odio. Nibh tellus molestie nunc non blandit massa. Mattis nunc sed blandit libero volutpat sed cras. Amet volutpat consequat mauris nunc. Gravida rutrum quisque non tellus orci ac auctor. Nisl purus in mollis nunc sed id semper. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam.
-					
-					Ut sem viverra aliquet eget sit amet tellus. Sodales neque sodales ut etiam sit amet nisl purus. Laoreet suspendisse interdum consectetur libero id faucibus. Tellus elementum sagittis vitae et leo duis. Lacus viverra vitae congue eu consequat ac. Purus semper eget duis at tellus at. Pretium aenean pharetra magna ac. Maecenas sed enim ut sem viverra aliquet eget sit amet. Netus et malesuada fames ac turpis egestas sed. Condimentum vitae sapien pellentesque habitant morbi tristique senectus. Duis at consectetur lorem donec massa sapien. Vel pharetra vel turpis nunc eget lorem dolor.
-					
-					Sapien eget mi proin sed libero enim sed faucibus. Orci porta non pulvinar neque. Cras sed felis eget velit aliquet sagittis id consectetur purus. Ultricies leo integer malesuada nunc vel risus. Nulla posuere sollicitudin aliquam ultrices sagittis orci a. Sed turpis tincidunt id aliquet risus. Pharetra diam sit amet nisl. Amet porttitor eget dolor morbi. Risus commodo viverra maecenas accumsan lacus vel facilisis. Tempus imperdiet nulla malesuada pellentesque elit eget gravida cum.
-					
-					Vitae elementum curabitur vitae nunc sed velit dignissim sodales. Amet est placerat in egestas erat imperdiet sed. Ut pharetra sit amet aliquam id diam. Sed augue lacus viverra vitae. Dictumst quisque sagittis purus sit amet volutpat consequat mauris. Eget est lorem ipsum dolor. Nam at lectus urna duis convallis. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Eleifend mi in nulla posuere. Morbi tincidunt augue interdum velit euismod. Eu facilisis sed odio morbi. Pellentesque adipiscing commodo elit at imperdiet. Tristique senectus et netus et malesuada fames ac turpis. Auctor elit sed vulputate mi sit amet mauris commodo quis. Id aliquet risus feugiat in ante metus. Ut tortor pretium viverra suspendisse potenti nullam ac. Blandit volutpat maecenas volutpat blandit aliquam. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Enim nunc faucibus a pellentesque sit. Dui nunc mattis enim ut tellus.
-					
-					Vel turpis nunc eget lorem dolor sed viverra. Amet risus nullam eget felis eget nunc. Aliquet porttitor lacus luctus accumsan tortor posuere ac ut consequat. Urna condimentum mattis pellentesque id nibh. In egestas erat imperdiet sed euismod. Sapien eget mi proin sed libero enim sed faucibus. Mi sit amet mauris commodo quis imperdiet. Turpis egestas integer eget aliquet nibh praesent tristique magna sit. Congue eu consequat ac felis donec. Condimentum vitae sapien pellentesque habitant morbi tristique. Est velit egestas dui id ornare arcu odio ut sem. Pellentesque nec nam aliquam sem et tortor consequat id. At imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Velit scelerisque in dictum non consectetur a. Viverra aliquet eget sit amet tellus cras. Quis ipsum suspendisse ultrices gravida dictum. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere. Id ornare arcu odio ut sem. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci.
-					
-					Donec massa sapien faucibus et. Elementum eu facilisis sed odio morbi quis commodo odio. Cursus metus aliquam eleifend mi. Nunc sed blandit libero volutpat sed cras ornare. Tortor aliquam nulla facilisi cras. Condimentum id venenatis a condimentum vitae sapien pellentesque. In nibh mauris cursus mattis molestie a. Faucibus purus in massa tempor. Dolor sit amet consectetur adipiscing elit duis. Aliquam ut porttitor leo a diam. Ac ut consequat semper viverra nam libero justo laoreet. In eu mi bibendum neque egestas congue quisque egestas diam. Leo integer malesuada nunc vel risus commodo viverra maecenas. Fermentum iaculis eu non diam phasellus.
-					
-					Netus et malesuada fames ac. Proin libero nunc consequat interdum varius sit amet. Sit amet consectetur adipiscing elit. Varius vel pharetra vel turpis nunc eget lorem dolor sed. Faucibus in ornare quam viverra orci sagittis eu volutpat. Vulputate odio ut enim blandit volutpat. Sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur. Tortor at auctor urna nunc. Ac tortor dignissim convallis aenean et tortor at risus. Nunc id cursus metus aliquam eleifend mi in nulla posuere. Odio morbi quis commodo odio aenean sed adipiscing diam.
-					
-					Gravida in fermentum et sollicitudin ac. Ac ut consequat semper viverra. Et malesuada fames ac turpis. Non arcu risus quis varius quam quisque. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. Leo urna molestie at elementum eu facilisis sed odio. Nisl tincidunt eget nullam non nisi est sit amet. Eros donec ac odio tempor. Aliquam purus sit amet luctus venenatis lectus. Dolor sit amet consectetur adipiscing elit duis tristique sollicitudin nibh. Sed velit dignissim sodales ut eu sem integer. Tristique senectus et netus et malesuada fames ac turpis egestas. Vitae congue eu consequat ac felis donec et. Ac ut consequat semper viverra. Pellentesque habitant morbi tristique senectus et netus et malesuada.
-					
-					Mi eget mauris pharetra et ultrices neque. Tellus orci ac auctor augue mauris augue. Est sit amet facilisis magna. Convallis posuere morbi leo urna molestie at elementum. Massa id neque aliquam vestibulum morbi blandit cursus. Urna condimentum mattis pellentesque id nibh tortor id aliquet lectus. Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est. Nulla aliquet enim tortor at. Vel facilisis volutpat est velit egestas dui id. Nam libero justo laoreet sit amet. Et netus et malesuada fames ac turpis. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla. Vel turpis nunc eget lorem dolor sed viverra ipsum. Massa id neque aliquam vestibulum morbi blandit cursus risus at. Bibendum arcu vitae elementum curabitur vitae.
-					
-					Tortor id aliquet lectus proin nibh nisl condimentum. Sed tempus urna et pharetra pharetra. Integer eget aliquet nibh praesent tristique. Quis lectus nulla at volutpat diam ut. Ut etiam sit amet nisl. Duis ut diam quam nulla porttitor. In dictum non consectetur a erat. Nunc id cursus metus aliquam eleifend mi. Risus nullam eget felis eget. Mauris ultrices eros in cursus turpis massa tincidunt. Vulputate enim nulla aliquet porttitor lacus. Sit amet nisl purus in mollis nunc. Morbi tempus iaculis urna id volutpat lacus laoreet non curabitur. Id aliquet risus feugiat in. Orci phasellus egestas tellus rutrum tellus pellentesque eu. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae elementum.
-					
-					Condimentum vitae sapien pellentesque habitant. Est ante in nibh mauris cursus mattis molestie a iaculis. Ullamcorper morbi tincidunt ornare massa eget egestas purus. Ut aliquam purus sit amet luctus venenatis. Orci ac auctor augue mauris. Ut ornare lectus sit amet est placerat in. Odio pellentesque diam volutpat commodo sed. Purus gravida quis blandit turpis. Quam vulputate dignissim suspendisse in est. Vel fringilla est ullamcorper eget. Pharetra magna ac placerat vestibulum lectus mauris ultrices eros. Penatibus et magnis dis parturient montes nascetur ridiculus mus mauris. Morbi non arcu risus quis varius quam quisque. Quisque id diam vel quam elementum pulvinar etiam non quam. Mauris in aliquam sem fringilla ut morbi tincidunt.
-				</p>
+			<div style="width:100%;text-align:justify;padding-bottom:100px;">
+<p><strong>This Privacy Policy governs the manner in which nfoot.net collects, uses, maintains and discloses information collected from users (each, a “User”) of the www.nfoot.net website (“Site”).</strong>&nbsp;<br><br><strong>Personal identification information</strong>&nbsp;<br>We may collect personal identification information from Users in a variety of ways, including, but not limited to, when Users visit our site, respond to a survey, and in connection with other activities, services, features or resources we make available on our Site. Users may visit our Site anonymously. We will collect personal identification information from Users only if they voluntarily submit such information to us. Users can always refuse to supply personally identification information, except that it may prevent them from engaging in certain Site related activities.&nbsp;<br><br><strong>Non-personal identification information</strong>&nbsp;<br>We may collect non-personal identification information about Users whenever they interact with our Site. Non-personal identification information may include the browser name, the type of computer and technical information about Users means of connection to our Site, such as the operating system and the Internet service providers utilized and other similar information.&nbsp;<br><br><strong>Web browser cookies</strong>&nbsp;<br>Our Site may use “cookies” to enhance User experience. User's web browser places cookies on their hard drive for record-keeping purposes and sometimes to track information about them. User may choose to set their web browser to refuse cookies, or to alert you when cookies are being sent. If they do so, note that some parts of the Site may not function properly.&nbsp;<br><br><strong>How we use collected information</strong>&nbsp;<br>nfoot.net may collect and use Users personal information for the following purposes:&nbsp;<br><strong>To run and operate our Site:&nbsp;</strong>We may need your information display content on the Site correctly.&nbsp;<br><strong>To improve our Site:</strong>&nbsp;We may use feedback you provide to improve our products and services.&nbsp;<br><br><strong>How we protect your information</strong>&nbsp;<br>We adopt appropriate data collection, storage and processing practices and security measures to protect against unauthorized access, alteration, disclosure or destruction of your personal information, username, password, transaction information and data stored on our Site.&nbsp;<br><br><strong>Sharing your personal information</strong>&nbsp;<br>We do not sell, trade, or rent Users personal identification information to others. We may share generic aggregated demographic information not linked to any personal identification information regarding visitors and users with our business partners, trusted affiliates and advertisers for the purposes outlined above.&nbsp;<br><br><strong>Third party websites</strong>&nbsp;<br>Users may find advertising or other content on our Site that link to the sites and services of our partners, suppliers, advertisers, sponsors, licensors and other third parties. We do not control the content or links that appear on these sites and thus we are not responsible for the practices employed or content by websites linked to or from our Site. In addition, these sites or services, including their content and links, may be constantly changing. These sites and services may have their own privacy policies and customer service policies. Browsing and interaction on any other website, including websites which have a link to our Site, is subject to that website's own terms and policies.&nbsp;<br><br><strong>Advertising</strong>&nbsp;<br>Ads appearing on our site may be delivered to Users by advertising partners, who may set cookies. These cookies allow the ad server to recognize your computer each time they send you an online advertisement to compile non personal identification information about you or others who use your computer. This information allows ad networks to, among other things, deliver targeted advertisements that they believe will be of most interest to you. This privacy policy does not cover the use of cookies by any advertisers.</p>
+
+
+
+<p><strong>General Data Protection Regulation (GDPR)</strong><br>We are a Data Controller of your information.</p>
+
+
+
+<p>nfoot.net legal basis for collecting and using the personal information described in this Privacy Policy depends on the Personal Information we collect and the specific context in which we collect the information:<br>– nfoot.net needs to perform a contract with you<br>–&nbsp;You have given nfoot.net permission to do so<br>–&nbsp;Processing your personal information is in nfoot.net legitimate interests<br>–&nbsp;nfoot.net needs to comply with the law<br>–&nbsp;nfoot.net will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our policies. Our Privacy Policy was generated with the help of GDPR Privacy Policy Generator and the GDPR Privacy Policy Template.</p>
+
+
+
+<p>If you are a resident of the European Economic Area (EEA), you have certain data protection rights. If you wish to be informed what Personal Information we hold about you and if you want it to be removed from our systems, please contact us.</p>
+
+
+
+<p>In certain circumstances, you have the following data protection rights:<br>–&nbsp;The right to access, update or to delete the information we have on you.<br>–&nbsp;The right of rectification.<br>–&nbsp;The right to object.<br>–&nbsp;The right of restriction.<br>–&nbsp;The right to data portability<br>–&nbsp;The right to withdraw consent</p>
+
+
+
+<p><strong>California Consumer Privacy Act (CCPA)</strong><br>This Privacy Notice for California Residents applies solely to all visitors, users, and others who reside in the State of California. We adopted this notice to comply with the California Consumer Privacy Act of 2018 (CCPA) and any terms defined in the CCPA have the same meaning when used in this notice.<br>Our website collects information that identifies, relates to, describes, references, is capable of being associated with, or could reasonably be linked, directly or indirectly, with a particular consumer or device (“personal information“). In particular, our website has collected the following categories of personal information from its consumers within the last twelve (12) months:</p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td>Category</td><td>Collected?</td></tr><tr><td>A. Identifiers.</td><td>Yes</td></tr><tr><td>B. Personal information categories listed in the California Customer Records statute (Cal. Civ. Code § 1798.80(e)).</td><td>Yes</td></tr><tr><td>C. Protected classification characteristics under California or federal law.</td><td>No</td></tr><tr><td>D. Commercial information.</td><td>Yes</td></tr><tr><td>E. Biometric information.</td><td>No</td></tr><tr><td>F. Internet or other similar network activity.</td><td>Yes</td></tr><tr><td>G. Geolocation data.</td><td>Yes</td></tr><tr><td>H. Sensory data.</td><td>No</td></tr><tr><td>I. Professional or employment-related information.</td><td>No</td></tr><tr><td>J. Non-public education information (per the Family Educational Rights and Privacy Act (20 U.S.C. Section 1232g, 34 C.F.R. Part 99)).</td><td>No</td></tr><tr><td>K. Inferences drawn from other personal information.</td><td>No</td></tr></tbody></table></figure>
+
+
+
+<p>Personal information does not include:</p>
+
+
+
+<ul><li>Publicly available information from government records.</li><li>Deidentified or aggregated consumer information.</li><li>Information excluded from the CCPA’s scope, like certain health or medical information and other categories of information protected by different laws.</li></ul>
+
+
+
+<p>We obtain the categories of personal information listed above from the following categories of sources:</p>
+
+
+
+<ul><li>Directly from you. For example, from forms you complete or products and services you purchase.</li><li>Indirectly from you. For example, from observing your actions on our website.</li></ul>
+
+
+
+<p>Use of Personal information</p>
+
+
+
+<p>We may use or disclose the personal information we collect for one or more of the following business purposes:</p>
+
+
+
+<ul><li>To fulfill or meet the reason you provided the information. For example, if you share your name and contact information to request a price quote or ask a question about our services, we will use that personal information to respond to your inquiry. If you provide your personal information to purchase a product or service, we will use that information to process your payment and facilitate delivery. We may also save your information to facilitate new product orders or process returns.</li><li>To process your requests, purchases, transactions, and payments and prevent transactional fraud.</li><li>To provide you with support and to respond to your inquiries, including to investigate and address your concerns and monitor and improve our responses.</li><li>To respond to law enforcement requests and as required by applicable law, court order, or governmental regulations.</li><li>As described to you when collecting your personal information or as otherwise set forth in the CCPA.</li><li>To evaluate or conduct a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of our or our affiliates’ assets in which personal information held by us or our affiliates about our website users is among the assets transferred.</li></ul>
+
+
+
+<p>We will not collect additional categories of personal information or use the personal information we collect for materially different, unrelated, or incompatible purposes without providing you notice.</p>
+
+
+
+<p>Sharing Personal Information</p>
+
+
+
+<p>We may disclose your personal information to a third party for a business purpose. When we disclose personal information for a business purpose, we enter a contract that describes the purpose and requires the recipient to both keep that personal information confidential and not use it for any purpose except performing the contract.</p>
+
+
+
+<p>We share your personal information with the following categories of third parties:</p>
+
+
+
+<ul><li>Service providers.</li><li>Data Aggregators.</li></ul>
+
+
+
+<p>Your rights</p>
+
+
+
+<p>The CCPA provides consumers (California residents) with specific rights regarding their personal information. This section describes your CCPA rights and explains how to exercise those rights.</p>
+
+
+
+<p>Access to Specific Information and Data Portability Rights</p>
+
+
+
+<p>You have the right to request that we disclose certain information to you about our collection and use of your personal information over the past 12 months. Once we receive and confirm your verifiable consumer request (see&nbsp;<em>Exercising Access, Data Portability, and Deletion Rights</em>), we will disclose to you:</p>
+
+
+
+<ul><li>The categories of personal information we’ve&nbsp;collected about you.</li><li>The categories of sources for the personal information we’ve&nbsp;collected about you.</li><li>Our business or commercial purpose for collecting or selling that personal information.</li><li>The categories of third parties with whom we share that personal information.</li><li>The specific pieces of personal information we’ve&nbsp;collected about you (also called a data portability request).</li><li>If we sold or disclosed your personal information for a business purpose, two separate lists disclosing:<ul><li>sales, identifying the personal information categories that each category of recipient purchased; and</li><li>disclosures for a business purpose, identifying the personal information categories that each category of recipient obtained.</li></ul></li></ul>
+
+
+
+<p>Deletion Request Rights</p>
+
+
+
+<p>You have the right to request that we delete any of your personal information that we collected from you and retained, subject to certain exceptions. Once we receive and confirm your verifiable consumer request (see&nbsp;<em>Exercising Access, Data Portability, and Deletion Rights</em>), we will delete (and direct our service providers to delete) your personal information from our records, unless an exception applies.</p>
+
+
+
+<p>We may deny your deletion request if retaining the information is necessary for us or our service provider(s) to:</p>
+
+
+
+<ul><li>Complete the transaction for which we collected the personal information, provide a good or service that you requested, take actions reasonably anticipated within the context of our ongoing business relationship with you, or otherwise perform our contract with you.</li><li>Detect security incidents, protect against malicious, deceptive, fraudulent, or illegal activity, or prosecute those responsible for such activities.</li><li>Debug products to identify and repair errors that impair existing intended functionality.</li><li>Comply with the California Electronic Communications Privacy Act (Cal. Penal Code § 1546&nbsp;<em>seq.</em>).</li><li>Enable solely internal uses that are reasonably aligned with consumer expectations based on your relationship with us.</li><li>Comply with a legal obligation.</li><li>Make other internal and lawful uses of that information that are compatible with the context in which you provided it.</li></ul>
+
+
+
+<p>Personal Information Sales</p>
+
+
+
+<p>We will not sell your personal information to any party. If in the future, we anticipate selling your personal information to any party, we will provide you with the opt-out and opt-in rights required by the CCPA.</p>
+
+
+
+<p>Non-Discrimination</p>
+
+
+
+<p>We will not discriminate against you for exercising any of your CCPA rights. Unless permitted by the CCPA, we will not:</p>
+
+
+
+<ul><li>Deny you goods or services.</li><li>Charge you different prices or rates for goods or services, including through granting discounts or other benefits, or imposing penalties.</li><li>Provide you a different level or quality of goods or services.</li><li>Suggest that you may receive a different price or rate for goods or services or a different level or quality of goods or services.</li></ul>
+
+
+
+<p>Other California Privacy Rights</p>
+
+
+
+<p>California’s “Shine the Light” law (Civil Code Section § 1798.83) permits users of our website that are California residents to request certain information regarding our disclosure of personal information to third parties for their direct marketing purposes. To make such a request, please send an email to&nbsp;<a href="mailto:contact@nfoot.net">contact@nfoot.net</a>.</p>
+
+
+
+<p><strong>Log Files</strong><br>nfoot.net follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.</p>
+
+
+
+<p><br><strong>Changes to this privacy policy</strong>&nbsp;<br>nfoot.net has the discretion to update this privacy policy at any time. When we do, we will post a notification on the main page of our Site. We encourage Users to frequently check this page for any changes to stay informed about how we are helping to protect the personal information we collect. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications.&nbsp;<br><br><strong>Your acceptance of these terms</strong>&nbsp;<br>By using this Site, you signify your acceptance of this policy. If you do not agree to this policy, please do not use our Site. Your continued use of the Site following the posting of changes to this policy will be deemed your acceptance of those changes. This policy was generated using http://PrivacyPolicies.com&nbsp;<br><br><strong>Contacting us</strong>&nbsp;<br>If you have any questions about this Privacy Policy, the practices of this site, or your dealings with this site, please contact us.&nbsp;<br><br>This site policy was last updated on July 1st, 2020. Should we update, amend or make any changes to this document, those changes will be prominently posted here.</p>
 			</div>
 		</div>
 	</div>
