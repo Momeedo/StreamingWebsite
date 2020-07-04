@@ -139,7 +139,7 @@
 						<div class="button-game" id="button-game-none" onclick="window.location.href='#channels-list'">
 							<div class="none-highlighted-game">
 								<div class="no-game-text">
-									<span>No Highlighted Games at the time</span>						
+									<span>No Highlighted Live Games at the time</span>						
 								</div>	
 								<div class="check-channels-text">
 									<span><i class="fas fa-arrow-circle-down"></i> You can still browse Live Channels to find your game <i class="fas fa-arrow-circle-down"></i></span>						
