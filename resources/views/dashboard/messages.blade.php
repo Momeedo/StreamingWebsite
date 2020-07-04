@@ -57,7 +57,6 @@
 								<th>Link</th>
 								<th style="min-width: 300px;">Message</th>
 								<th>Read?</th>
-								<th style="min-width: 100px;">Mark as Read</th>
 								<th>Delete</th>
 							</tr>
 						</thead>
@@ -73,67 +72,49 @@
 								<th>Link</th>
 								<th>Message</th>
 								<th>Read?</th>
-								<th>Mark as Read</th>
 								<th>Delete</th>
 							</tr>
 						</tfoot>
 						<tbody>
-							<tr style="background-color:#ecf1ff;">
-								<td>5</td>
-								<td>2020/05/25 18:30</td>
-								<td>Will Smith</td>
-								<td>emailgmail.com</td>
-								<td>127.0.0.1</td>
-								<td>USA</td>
-								<td>Broken Link</td>
-								<td>link.com/link</td>
-								<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
-								<td><i class="fas fa-times-circle" style="color:#e74a3b;"></i></td>
-								<td> 
-									<div class="text-center">
-										<a href="#" class="btn btn-success btn-icon-split">
+                            @foreach ($messages as $message)
+                            <tr 
+                            @if ($message->is_read == 0)
+                                class="message-is-not-read"
+                            @endif
+                            id="message_{{$message->id}}">
+                                <td>{{$message->id}}</td>
+                                <td>{{$message->created_at}}</td>
+                                <td>{{$message->username}}</td>
+                                <td>{{$message->email}}</td>
+                                <td>{{$message->ip}}</td>
+                                <td>{{$message->country}}</td>
+                                <td>{{$message->type}}</td>
+                                <td>{{$message->link}}</td>
+                                <td>{{$message->message}}</td>
+                                <td id="td-{{$message->id}}">
+                                @if ($message->is_read == 0)
+                                    <div id="markasread-button-{{$message->id}}" class="text-center">
+										<a href="#" class="btn btn-success btn-icon-split" onclick="markasRead({{$message->id}})">
 											<span class="icon text-white-50">
 												<i class="fas fa-check-circle"></i>
 											</span>
 										</a> 
 									</div>
-								</td>
+                                @else
+                                    <center><i class="fas fa-check-circle" style="color:#1cc88a;"></i></center>
+                                @endif
+                                </td>
 								<td> 
 									<div class="text-center">
-										<a href="#" class="btn btn-danger btn-icon-split" data-toggle="modal" data-target="#deleteModal">
+										<a href="#" class="btn btn-danger btn-icon-split" data-toggle="modal" data-target="#deleteModal" onclick="toggleDelete({{$message->id}})">
 											<span class="icon text-white-50">
 												<i class="fas fa-trash"></i>
 											</span>
 										</a> 
 									</div>
 								</td>
-							</tr>
-							
-							<tr>
-								<td>5</td>
-								<td>2020/05/25 18:30</td>
-								<td>Will Smith</td>
-								<td>emailgmail.com</td>
-								<td>127.0.0.1</td>
-								<td>USA</td>
-								<td>Broken Link</td>
-								<td>link.com/link</td>
-								<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
-								<td><i class="fas fa-check-circle" style="color:#1cc88a;"></i></td>
-								<td> 
-									
-								</td>
-								<td> 
-									<div class="text-center">
-										<a href="#" class="btn btn-danger btn-icon-split" data-toggle="modal" data-target="#deleteModal">
-											<span class="icon text-white-50">
-												<i class="fas fa-trash"></i>
-											</span>
-										</a> 
-									</div>
-								</td>
-							</tr>					
-							
+                            </tr>
+                            @endforeach							
 						</tbody>
 					</table>
 				</div>
@@ -145,10 +126,78 @@
 	<!-- /.container-fluid -->
 	
 </div>
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirm action</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="cancelDelete()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete this Message?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="confirmDelete()">Yes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="cancelDelete()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
 @section('js')
 <script src="{{ asset('/dashboard/vendor/datatables/jquery.dataTables.min.js') }}"></script>
 <script src="{{ asset('/dashboard/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
 <script src="{{ asset('/dashboard/js/demo/datatables-demo.js') }}"></script>
+<script>
+  let toDelete = -1;
+  function toggleDelete(id) {
+    toDelete = id 
+  }
+
+  function confirmDelete () {
+    $.ajax({
+      beforeSend: function (xhr) {
+        xhr.setRequestHeader('X-CSRF-TOKEN', $('meta[name="csrf-token"]').attr('content'))
+      },
+      method: "POST",
+      url: '/manage/message-delete',
+      data: {
+        id: toDelete
+      },
+      success: function (data) {
+        document.querySelector(`#message_${toDelete}`).remove()
+      },
+      error: function (err) {
+        alert('There was an error, please try later!')
+      }
+    })
+  }
+  function cancelDelete () {
+    toDelete = -1
+  }
+  function markasRead (id) {
+    $.ajax({
+      beforeSend: function (xhr) {
+        xhr.setRequestHeader('X-CSRF-TOKEN', $('meta[name="csrf-token"]').attr('content'))
+      },
+      method: "POST",
+      url: '/manage/message-read',
+      data: {
+        id: id
+      },
+      success: function (data) {
+        $(`#message_${id}`).removeClass("message-is-not-read"),
+        $(`#markasread-button-${id}`).remove(),
+        $(`#td-${id}`).append("<center><i class='fas fa-check-circle' style='color:#1cc88a;'></i></center>")
+        
+      },
+      error: function (err) {
+        alert('There was an error, please try later!')
+      }
+    })
+  }
+</script>
 @endsection
 <!-- End of Main Content -->
 @endsection

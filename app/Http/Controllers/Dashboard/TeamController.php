@@ -40,6 +40,7 @@ class TeamController extends Controller
         request()->validate([
         'name' => 'required',
         'country' => 'required',
+        'logo' => 'required'
         ]);
         
         $all = $request->all();
@@ -53,14 +54,8 @@ class TeamController extends Controller
         //Image::make($logo)->fit(400,400)->encode('png', 70)->save('uploads/logos/'.$file_name.'.png');
         Image::make($logo)->encode('png', 70)->save('uploads/logos/'.$file_name.'.png');
         $team->logo = $file_name.'.png';
-        if ($team->save())
-        {
-            return redirect('manage/teams');
-        }
-        else
-        {
-            return response()->json(['result' => 'fail', 'code' => 400]);
-        }
+        $team->save();
+        return redirect('manage/teams')->withErrors(['msg', 'The Message']);
     }
 
     public function remove (Request $request) {
@@ -85,7 +80,7 @@ class TeamController extends Controller
     public function update(Request $request, $id){
         request()->validate([
         'name' => 'required',
-        'country' => 'required',
+        'country' => 'required'
         ]);
         
         $team = Team::find($id);
@@ -95,19 +90,13 @@ class TeamController extends Controller
         $logo = $request->file('logo');
         if ($logo){
             $file_name = 'team_'.$team->name.'_'.uniqid();
+            File::delete('uploads/logos/'.$team->logo);
             Storage::putFileAs('uploads/logos', $logo, $file_name);
             Image::make($logo)->encode('png', 70)->save('uploads/logos/'.$file_name.'.png');
             $team->logo = $file_name.'.png';
         }
-        if ($team->save())
-        {
-            File::delete('uploads/logos/'.$team->logo);
-            return redirect('manage/teams');
-        }
-        else
-        {
-            return response()->json(['result' => 'fail', 'code' => 400]);
-        }
+        $team->save();
+        return redirect('manage/teams')->withErrors(['msg', 'The Message']);
         
     }
 }

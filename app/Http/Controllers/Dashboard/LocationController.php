@@ -29,6 +29,7 @@ class LocationController extends Controller
         'name' => 'required',
         'country' => 'required',
         'town' => 'required',
+        'image' => 'required'
         ]);
         
         $all = $request->all();
@@ -42,14 +43,8 @@ class LocationController extends Controller
         Storage::putFileAs('uploads/locations', $image, $file_name);
         Image::make($image)->encode('png', 70)->save('uploads/locations/'.$file_name.'.png');
         $location->image = $file_name.'.png';
-        if ($location->save())
-        {
-            return redirect('manage/locations');
-        }
-        else
-        {
-            return response()->json(['result' => 'fail', 'code' => 400]);
-        }
+        $location->save();
+        return redirect('manage/locations')->withErrors(['msg', 'The Message']);
     }
     public function remove (Request $request) {
       $id = $request->get('id');
@@ -72,6 +67,7 @@ class LocationController extends Controller
         request()->validate([
         'name' => 'required',
         'country' => 'required',
+        'town' => 'required'
         ]);
         
         $location = Location::find($id);
@@ -82,19 +78,13 @@ class LocationController extends Controller
         $image = $request->file('image');
         if ($image){
             $file_name = 'location_'.$location->name.'_'.uniqid();
+            File::delete('uploads/locations/'.$location->image);
             Storage::putFileAs('uploads/locations', $image, $file_name);
             Image::make($image)->encode('png', 70)->save('uploads/locations/'.$file_name.'.png');
             $location->image = $file_name.'.png';
         }
-        if ($location->save())
-        {
-            File::delete('uploads/locations/'.$location->image);
-            return redirect('manage/locations');
-        }
-        else
-        {
-            return response()->json(['result' => 'fail', 'code' => 400]);
-        }
+        $location->save();
+        return redirect('manage/locations')->withErrors(['msg', 'The Message']);
         
     }
 }

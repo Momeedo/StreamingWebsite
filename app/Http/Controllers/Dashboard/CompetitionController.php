@@ -40,6 +40,7 @@ class CompetitionController extends Controller
         'country' => 'required',
         'sport' => 'required',
         'type' => 'required',
+        'logo' => 'required'
         ]);
         
         $all = $request->all();
@@ -54,14 +55,8 @@ class CompetitionController extends Controller
         Storage::putFileAs('uploads/competitions', $logo, $file_name);
         Image::make($logo)->encode('png', 70)->save('uploads/competitions/'.$file_name.'.png');
         $competition->logo = $file_name.'.png';
-        if ($competition->save())
-        {
-            return redirect('manage/competitions');
-        }
-        else
-        {
-            return response()->json(['result' => 'fail', 'code' => 400]);
-        }
+        $competition->save();
+        return redirect('manage/competitions')->withErrors(['msg', 'The Message']);
     }
     public function remove (Request $request) {
       $id = $request->get('id');
@@ -84,31 +79,25 @@ class CompetitionController extends Controller
         'name' => 'required',
         'country' => 'required',
         'sport' => 'required',
-        'type' => 'required',
+        'type' => 'required'
         ]);
         
-        $competition = new Competition;
-        $competition->name = $all['name'];
-        $competition->country = $all['country'];
-        $competition->sport = $all['sport'];
-        $competition->type = $all['type'];
+        $competition = Competition::find($id);
+        $competition->name = $request->name;
+        $competition->country = $request->country;
+        $competition->sport = $request->sport;
+        $competition->type = $request->type;
         
         $logo = $request->file('logo');
         if ($logo){
             $file_name = 'competition_'.$competition->name.'_'.uniqid();
+            File::delete('uploads/competitions/'.$competition->logo);
             Storage::putFileAs('uploads/competitions', $logo, $file_name);
             Image::make($logo)->encode('png', 70)->save('uploads/competitions/'.$file_name.'.png');
-            $competition->image = $file_name.'.png';
+            $competition->logo = $file_name.'.png';
         }
-        if ($competition->save())
-        {
-            File::delete('uploads/competitions/'.$competition->logo);
-            return redirect('manage/competitions');
-        }
-        else
-        {
-            return response()->json(['result' => 'fail', 'code' => 400]);
-        }
+        $competition->save();
+        return redirect('manage/competitions')->withErrors(['msg', 'The Message']);
         
     }
 }

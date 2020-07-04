@@ -60,7 +60,7 @@
 								<th>Language</th>
 								<th>Country</th>
 								<th>Game Now?</th>
-								<th>Tags</th>
+								<!--<th>Tags</th>-->
 								<th>Status</th>
 								<th>Edit</th>
 								<th>Delete</th>
@@ -76,27 +76,46 @@
 								<th>Language</th>
 								<th>Country</th>
 								<th>Game Now?</th>
-								<th>Tags</th>
+								<!--<th>Tags</th>-->
 								<th>Status</th>
 								<th>Edit</th>
 								<th>Delete</th>
 							</tr>
 						</tfoot>
 						<tbody>
-							<tr>
-								<td>5</td>
-								<td><img width="200px" src="https://cdn.bein.net/fr/wp-content/uploads/2018/05/beINSPORTSHD1.png"></td>
-								<td><img width="200px" src="https://im.haberturk.com/2019/10/24/ver1572176319/2534061_810x458.jpg"></td>
-								<td>BeIN Sports HD 1</td>
-								<td>dsf45sd56fdsdf</td>
-								<td>Arabic</td>
-								<td>Qatar</td>
-								<td><i class="fas fa-check-circle" style="color:#1cc88a;"></i></td>
-								<td>Football, Basketball, Arabic, Live</td>
-								<td>Active</td>
+                            @foreach($channels as $channel)
+							<tr id="channel_{{$channel->id}}">
+								<td>{{$channel->id}}</td>
+								<td><img width="200px" src="{{url('/uploads/channels')}}/{{$channel->logo}}"></td>
+								<td><img width="200px" src="{{url('/uploads/channels')}}/{{$channel->banner}}"></td>
+								<td>{{$channel->name}}</td>
+								<td>{{$channel->link}}</td>
+								<td>{{$channel->language}}</td>
+								<td>{{$channel->country}}</td>
+								<td>
+                                    @if (in_array ($channel->id, $channels_with_a_game_now))
+                                    <i class="fas fa-check-circle" style="color:#1cc88a;"></i>
+                                    @else
+                                    <i class="fas fa-times-circle" style="color:#e74a3b;"></i>
+                                    @endif
+                                </td>
+                                <!--
+								<td>
+                                @foreach($channel->tags as $tag)
+                                    {{$tag->name}}&nbsp;
+                                @endforeach
+                                </td>
+                                -->
+								<td>
+                                @if ($channel->stauts == 1)
+                                <i class="fas fa-circle" style="color:#1cc88a;"></i> Active
+                                @else
+                                <i class="fas fa-circle" style="color:#e74a3b;"></i> Inactive
+                                @endif
+                                </td>
 								<td> 
 									<div class="text-center">
-										<a href="#" class="btn btn-primary btn-icon-split">
+										<a href="{{url('manage/channels/edit/'.$channel->id)}}" class="btn btn-primary btn-icon-split">
 											<span class="icon text-white-50">
 												<i class="fas fa-edit"></i>
 											</span>
@@ -105,7 +124,7 @@
 								</td>
 								<td> 
 									<div class="text-center">
-										<a href="#" class="btn btn-danger btn-icon-split" data-toggle="modal" data-target="#deleteModal">
+										<a href="#" class="btn btn-danger btn-icon-split" data-toggle="modal" data-target="#deleteModal" onclick="toggleDelete({{$channel->id}})">
 											<span class="icon text-white-50">
 												<i class="fas fa-trash"></i>
 											</span>
@@ -113,8 +132,7 @@
 									</div>
 								</td>
 							</tr>
-							
-							
+							@endforeach
 						</tbody>
 					</table>
 				</div>
@@ -124,10 +142,58 @@
 	</div>
 	<!-- /.container-fluid -->
 </div>
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirm action</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="cancelDelete()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete this Game?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="confirmDelete()">Yes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="cancelDelete()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 @section('js')
 <script src="{{ asset('/dashboard/vendor/datatables/jquery.dataTables.min.js') }}"></script>
 <script src="{{ asset('/dashboard/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
 <script src="{{ asset('/dashboard/js/demo/datatables-demo.js') }}"></script>
+<script>
+  let toDelete = -1;
+  function toggleDelete(id) {
+    toDelete = id 
+  }
+
+  function confirmDelete () {
+    $.ajax({
+      beforeSend: function (xhr) {
+        xhr.setRequestHeader('X-CSRF-TOKEN', $('meta[name="csrf-token"]').attr('content'))
+      },
+      method: "POST",
+      url: '/manage/channel-delete',
+      data: {
+        id: toDelete
+      },
+      success: function (data) {
+        document.querySelector(`#channel_${toDelete}`).remove()
+      },
+      error: function (err) {
+        alert('There was an error, please try later!')
+      }
+    })
+  }
+  function cancelDelete () {
+    toDelete = -1
+  }
+</script>
 @endsection
 <!-- End of Main Content -->
 @endsection

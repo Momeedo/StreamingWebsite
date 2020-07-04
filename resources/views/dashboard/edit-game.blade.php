@@ -47,52 +47,53 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Add a New Game</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Edit<br><center>{{$game->teamA->name}} <i class="fas fa-times"></i> {{$game->teamB->name}}</center></h6>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    {!! Form::open(['action' => 'Dashboard\GameController@save', 'method' => 'POST', 'id' => 'addForm' ]) !!}
+                    {!! Form::open(['action' => ['Dashboard\GameController@update', $game->id], 'method' => 'POST', 'id' => 'addForm' ]) !!}
+                    @csrf
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <tbody>
                             <tr>
                                 <th>Team A</th>
                                 <td>
-                                    {!! Form::select('team_a_id', $teams_a, null, ['id' => 'teams_a', 'class' => 'form-control', 'style' => 'width:100%']) !!}
+                                    {!! Form::select('team_a_id', $teams_a, $game->team_a_id, ['id' => 'teams_a', 'class' => 'form-control', 'style' => 'width:100%']) !!}
                                 </td>
                             </tr>
                             <tr>
                                 <th>Team B</th>
                                 <td>
-                                    {!! Form::select('team_b_id', $teams_b, null, ['id' => 'teams_b', 'class' => 'form-control', 'style' => 'width:100%']) !!}
+                                    {!! Form::select('team_b_id', $teams_b, $game->team_b_id, ['id' => 'teams_b', 'class' => 'form-control', 'style' => 'width:100%']) !!}
                                 </td>
                             </tr>
                             <tr>
                                 <th>Channels</th>
-                                <td>{!! Form::select('channel_id_list[]', $channels, null, ['id' => 'channels', 'multiple' => 'multiple', 'class' => 'form-control', 'style' => 'width:100%']) !!}</td>
+                                <td>{!! Form::select('channel_id_list[]', $channels, $game->channels, ['id' => 'channels', 'multiple' => 'multiple', 'class' => 'form-control', 'style' => 'width:100%']) !!}</td>
                             </tr>
                             <tr>
                                 <th>Competition</th>
                                 <td>
-                                    {!! Form::select('competition_id', $competitions, null, ['id' => 'competitions', 'class' => 'form-control', 'style' => 'width:100%']) !!}
+                                    {!! Form::select('competition_id', $competitions, $game->competition_id, ['id' => 'competitions', 'class' => 'form-control', 'style' => 'width:100%']) !!}
                                 </td>
                             </tr>
                             <tr>
                                 <th>Round</th>
                                 <td>
-                                    {!! Form::text('round', '', ['id' => 'round', 'class' => 'form-control', 'style' => 'width:100%']) !!}
+                                    {!! Form::text('round', $game->round, ['id' => 'round', 'class' => 'form-control', 'style' => 'width:100%']) !!}
                                 </td>
                             </tr>
                             <tr>
                                 <th>Location</th>
                                 <td>
-                                    {!! Form::select('location_id', $locations, null, ['id' => 'locations', 'class' => 'form-control', 'style' => 'width:100%']) !!}
+                                    {!! Form::select('location_id', $locations, $game->location_id, ['id' => 'locations', 'class' => 'form-control', 'style' => 'width:100%']) !!}
                                 </td>
                             </tr>
                             <tr>
                                 <th>Start Date</th>
                                 <td style="min-width:70%;">
                                     <div>
-                                        {{ Form::input('startDate', '', null, array('class' => 'form-control', 'id' => 'startDate')) }}
+                                        {{ Form::input('startDate', '', $game->start_date, array('class' => 'form-control', 'id' => 'startDate')) }}
                                     </div>
                                 </td>
                             </tr>
@@ -100,7 +101,7 @@
                                 <th>End Date</th>
                                 <td style="min-width:70%;">
                                     <div class="input-group">
-                                        {{ Form::input('endDate', '', null, array('class' => 'form-control', 'id' =>  'endDate')) }}
+                                        {{ Form::input('endDate', '', $game->end_date, array('class' => 'form-control', 'id' =>  'endDate')) }}
                                     </div>
                                 </td>
                             </tr>
@@ -110,7 +111,7 @@
                                         <span class="icon text-white-50">
                                             <i class="fas fa-plus-square"></i>
                                         </span>
-                                        <span class="text">Add</span>
+                                        <span class="text">Edit</span>
                                     </button>
                                 </td>
                             </tr>
@@ -133,8 +134,7 @@
             $(function() {
                 $('#startDate').datetimepicker({
                     format: 'YYYY-MM-DD HH:mm',
-                    inline: true,
-                    sideBySide: true
+                    default: null
                 });
             });
         </script>

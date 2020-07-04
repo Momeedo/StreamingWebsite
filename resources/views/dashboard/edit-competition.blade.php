@@ -37,7 +37,15 @@
 	<!-- Begin Page Content -->
 	<div class="container-fluid">
 		
-		
+		@if($errors->any())
+		<div class="col-lg-12 mb-4">
+            <div class="card bg-danger text-white shadow">
+                <div class="card-body">
+                    <b><i class="fas fa-exclamation-triangle"></i> Error</b><br>{{$errors->first()}}
+                </div>
+            </div>
+        </div>
+        @endif
 		<!-- DataTales Example -->
 		<div class="card shadow mb-4">
 			<div class="card-header py-3">
@@ -81,11 +89,11 @@
 								</tr>
 								<tr>
 									<th>Logo</th>
-									<td><img style="width:20%;padding-right:10px;" src="/uploads/competitions/{{old('logo', $competition->logo)}}"><input type="file" style="width:80%;" name="logo"></td>
+									<td><img style="width:20%;padding-right:10px;" src="/uploads/competitions/{{old('logo', $competition->logo)}}"><input type="file" style="width:80%;" name="logo" accept="image/png, image/jpeg, image/gif"></td>
 								</tr>
 								<tr >
 									<td colspan="5">
-										<button type="submit" class="btn btn-success btn-icon-split" style="margin-bottom:20px;">
+										<button type="submit" class="btn btn-success btn-icon-split" style="margin-bottom:20px;" onclick="loadingscreen()">
 											<span class="icon text-white-50">
 												<i class="fas fa-plus-square"></i>
 											</span>

@@ -56,7 +56,15 @@
 	
 	<!-- Begin Page Content -->
 	<div class="container-fluid">
-		
+		@if($errors->any())
+		<div class="col-lg-12 mb-4">
+            <div class="card bg-danger text-white shadow">
+                <div class="card-body">
+                    <b><i class="fas fa-exclamation-triangle"></i> Error</b><br>{{$errors->first()}}
+                </div>
+            </div>
+        </div>
+        @endif
 		
 		<!-- DataTales Example -->
 		<div class="card shadow mb-4">
@@ -80,11 +88,11 @@
                 </tr>
                 <tr>
                   <th>Logo</th>
-                  <td><input type="file" style="width:100%;" name="logo"></td>
+                  <td><input type="file" style="width:100%;" name="logo" accept="image/png, image/jpeg, image/gif"></td>
                 </tr>
                 <tr >
                   <td colspan="3">
-                    <button class="btn btn-success btn-icon-split" type="submit" value="add">
+                    <button class="btn btn-success btn-icon-split" type="submit" value="add" onclick="loadingscreen()">
                     <span class="icon text-white-50">
                         <i class="fas fa-plus-square"></i>
                       </span>

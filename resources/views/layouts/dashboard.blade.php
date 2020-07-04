@@ -19,12 +19,12 @@
 		<div id="wrapper">
 			
 			<!-- Sidebar -->
-			<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+			<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled" id="accordionSidebar">
 				
 				<!-- Sidebar - Brand -->
 				<a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('manage') }}">
 					<div class="sidebar-brand-icon rotate-n-15">
-						<i class="fas fa-laugh-wink"></i>
+						<i class="fas fa-futbol"></i>
 					</div>
 					<div class="sidebar-brand-text mx-3">Dashboard</div>
 				</a>
@@ -149,7 +149,9 @@
 				</div>
 			</div>
 		</div>
-		
+        <div id="loading">
+          <img id="loading-image" src="{{ asset('/dashboard/img/Spinner.svg') }}" alt="Loading..." />
+        </div>
 		<!-- Bootstrap core JavaScript-->
 		<script src="{{ asset('/dashboard/vendor/jquery/jquery.min.js') }}"></script>
 		<script src="{{ asset('/dashboard/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
@@ -166,6 +168,11 @@
         -->
 		<script src="{{ asset('/dashboard/vendor/bootstrap-select2/select2.min.js') }}"></script>
     @yield('js')
+    <script>
+    function loadingscreen () {
+        $('#loading').show();
+    }
+    </script>
 		
 	</body>
 </html>
