@@ -46,7 +46,12 @@
 							<ul class="controls-lv">
 								<li class="user-log">
 									<div class="user-ac-img">
-										<img src="images/resources/user-img.png" alt="">
+                                        @auth
+										<i class="fas fa-user-check" style="color: #3cb878;"></i>
+                                        @endauth
+                                        @guest
+                                        <i class="fas fa-user-times"></i>
+                                        @endguest
 									</div>
 									<div class="account-menu">
                                         @auth
