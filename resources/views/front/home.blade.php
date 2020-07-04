@@ -20,7 +20,7 @@
 <section class="vds-main">
 	<div class="container">
 		<div class="vidz_sec">
-			<h3>Highlighted Live Games<a class="h3-seeall" href="{{ url('games') }}">(See All Highlighted Games)</a></h3>
+			<h3>Highlighted Live Games <a class="h3-seeall" href="{{ url('games') }}">(See All Highlighted Games)</a></h3>
 			<div class="vidz_list">
 				<div class="row">
 					
