@@ -7,20 +7,23 @@ use Illuminate\Database\Eloquent\Model;
 
 class Game extends Model
 {
-    public function status ($st, $et) {
-      $today = Carbon::now();
-      $sd = Carbon::parse($st);
-      $ed = Carbon::parse($et);
+    public function status () {
 
+      $time_now = date("Y-m-d H:i:s");
+      
 
-      if ($today > $sd && $today <= $ed) {
-        $status = 'On-going';
-      } else if ($today >= $ed) {
-        $status = 'Finished';
-      } else if ($sd > $today) {
-        $status = 'Scheduled';
-      }
+     
       return $status;
+    }
+
+    public function timeRemaining () {
+      $gameDate =  Carbon::parse($this->start_date);
+      $now = Carbon::now();
+      $totalDuration = $now->diffInSeconds($gameDate);
+      return floor($totalDuration / 3600) . gmdate(":i:s", $totalDuration % 3600);
+    }
+    public function fullDate () {
+      return Carbon::parse($this->start_date)->utc()->format('d F yy H:i');
     }
     //
     public function channels () {
@@ -36,10 +39,10 @@ class Game extends Model
     }
 
     public function competition() {
-      return $this->hasOne(Competition::class, 'id');
+      return $this->hasOne(Competition::class, 'id', 'competition_id');
     }
 
     public function location() {
-      return $this->hasOne(Location::class, 'id');
+      return $this->hasOne(Location::class, 'id', 'location_id');
     }
 }
