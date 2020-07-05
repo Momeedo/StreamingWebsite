@@ -59,7 +59,13 @@
                       <div class="versus-symbol">
                         <span>&times;</span>
                       </div>
+                      @if($game->status() == 'Planned')
                       <div class="bottom-middle-part"><span>Planned</span></div>
+                      @elseif($game->status() == 'On-going')
+                      <div class="bottom-middle-part"><span class="highlighted-live"><span><i class="fas fa-circle"></i> Live</span></div>
+                      @else
+                      <div class="bottom-middle-part"><span>Done</span></div>
+                      @endif
                     </div>
                     <div class="team-name">
                       <span>Real madrid</span>

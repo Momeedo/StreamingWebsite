@@ -13,8 +13,9 @@ class HomeController extends Controller
     public function index () {
       $channels = Channel::all();
       $time_now = date("Y-m-d H:i:s");
+      $from = date("Y-m-d H:i:s", strtotime('-4 hours'));
       $to = date("Y-m-d H:i:s", strtotime('+2 day'));
-      $games = Game::whereBetween('start_date', [$time_now , $to])->get();
+      $games = Game::whereBetween('start_date', [$from , $to])->get();
       return view('front.home', ['channels' => $channels, 'games' => $games]);
     }
     public function privacy () {
