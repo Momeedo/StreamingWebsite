@@ -8,7 +8,7 @@
         <div class="button-banner">
           <div id="circle"></div>
           <a href="channel-page.html">
-            <img src="{{$channel->logo}}">
+            <img src="{{url('/uploads/channels')}}/{{$channel->logo}}" alt="{{$channel->logo}}">
           </a>
         </div>
       @endforeach
@@ -27,7 +27,7 @@
 					
 					<!-- Highlighted game -->
           @forelse($games as $game)
-            <div data-toggle="modal" data-target="#channelSelectModal" class="button-game" style="background: url(https://www.fcbarcelona.com/fcbarcelona/photo/2018/06/05/3ba57d13-21d3-4573-8595-20235304d4b1/13-14_wallpaper_camp-nou_001_cat.v1382006897.jpg) no-repeat center center;">
+            <div data-toggle="modal" data-target="#channelSelectModal" class="button-game" style="background: url({{url('/uploads/locations')}}/{{$game->location->image}}) no-repeat center center;">
               <div class="highlighted-game">
                 <div class="team-logo">
                   <span class="helper"></span>
@@ -75,7 +75,7 @@
                   <div class="channels-details">
                     <span class="helper"></span>
                     @foreach($game->channels as $channel)
-                      <img src="{{$channel->logo}}">
+                      <img src="{{url('/uploads/channels')}}/{{$channel->logo}}">
                     @endforeach                    
                   </div>
                 </div>
@@ -114,9 +114,9 @@
 					<h3>All Channels <a class="h3-seeall" href="{{ url('channels') }}">(See All)</a></h3>
 					<div class="vidz_list">
 						<div class="row">
-							
-							<!-- One Channel -->
-							<div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
+              
+            @foreach($channels as $channel)
+              <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
 								<div class="videoo">
 									<div class="vid_thumbainl">
 										<a href="channel-page.html" title="">
@@ -138,6 +138,9 @@
 									</div>
 								</div><!--videoo end-->
 							</div>
+            @endforeach
+							<!-- One Channel -->
+							
 							<!-- End One Channel -->
 							
 							<!-- One Channel -->

@@ -12,22 +12,18 @@ class Game extends Model
       $sd = Carbon::parse($this->start_date);
       $ed = Carbon::parse($this->end_date);
       $now = Carbon::now();
-      $status = '';
 
       $timeUntilGame = $now->diffInSeconds($sd, false);
       // var_dump( $timeUntilGame);
       if ($timeUntilGame < -7200) {
-        $status = 'Finished';
+        return 'Finished';
         
-      } else {
-        if ($timeUntilGame >= 0 && $timeUntilGame <= 900) {
-          $status = 'On-going';
-        } else  {
-          $status = 'Planned';
-        }
+      } 
+      if ($timeUntilGame >= -7200 && $timeUntilGame <= 900) {
+        return 'On-going';
       }
+      return 'Planned';
       
-      return $status;
     }
 
     public function timeRemaining () {
