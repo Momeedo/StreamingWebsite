@@ -16,7 +16,7 @@ use App\Location;
 class TeamController extends Controller
 {
     public function index () {
-      $teams = Team::orderBy('name', 'asc')->get();
+      $teams = Team::orderBy('country', 'asc')->orderBy('name', 'asc')->get();
       $time_now = date("Y-m-d H:i:s");
       $from = date("Y-m-d H:i:s", strtotime('-8 hours'));
       $to = date("Y-m-d H:i:s", strtotime('+8 hours'));
