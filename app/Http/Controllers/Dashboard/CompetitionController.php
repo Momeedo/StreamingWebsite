@@ -16,7 +16,7 @@ use App\Location;
 class CompetitionController extends Controller
 {
     public function index () {
-      $competitions = Competition::all();
+      $competitions = Competition::orderBy('name', 'asc')->get();
       $time_now = date("Y-m-d H:i:s");
       $from = date("Y-m-d H:i:s", strtotime('-8 hours'));
       $to = date("Y-m-d H:i:s", strtotime('+8 hours'));
@@ -53,7 +53,7 @@ class CompetitionController extends Controller
         $logo = $request->file('logo');
         $file_name = 'competition_'.$competition->name.'_'.uniqid();
         Storage::putFileAs('uploads/competitions', $logo, $file_name);
-        Image::make($logo)->encode('png', 70)->save('uploads/competitions/'.$file_name.'.png');
+        Image::make($logo)->fit(500,500)->encode('png', 70)->save('uploads/competitions/'.$file_name.'.png');
         $competition->logo = $file_name.'.png';
         $competition->save();
         return redirect('manage/competitions')->withErrors(['msg', 'The Message']);
@@ -93,7 +93,7 @@ class CompetitionController extends Controller
             $file_name = 'competition_'.$competition->name.'_'.uniqid();
             File::delete('uploads/competitions/'.$competition->logo);
             Storage::putFileAs('uploads/competitions', $logo, $file_name);
-            Image::make($logo)->encode('png', 70)->save('uploads/competitions/'.$file_name.'.png');
+            Image::make($logo)->fit(500,500)->encode('png', 70)->save('uploads/competitions/'.$file_name.'.png');
             $competition->logo = $file_name.'.png';
         }
         $competition->save();

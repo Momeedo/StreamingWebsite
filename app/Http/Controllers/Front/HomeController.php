@@ -11,7 +11,7 @@ use App\Game;
 class HomeController extends Controller
 {
     public function index () {
-      $channels = Channel::all();
+      $channels = Channel::orderByRaw('LENGTH(name) ASC')->orderBy('name', 'asc')->get();
       $time_now = date("Y-m-d H:i:s");
       $from = date("Y-m-d H:i:s", strtotime('-4 hours'));
       $to = date("Y-m-d H:i:s", strtotime('+2 day'));

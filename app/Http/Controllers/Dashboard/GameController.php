@@ -57,7 +57,6 @@ class GameController extends Controller
     }
     public function save(Request $request) {
         request()->validate([
-        'round' => 'required',
         'startDate' => 'required',
         'channel_id_list' => 'required'
         ]);
@@ -95,7 +94,6 @@ class GameController extends Controller
     
     public function update(Request $request, $id){  
         request()->validate([
-        'round' => 'required',
         'startDate' => 'required',
         'channel_id_list' => 'required'
         ]);

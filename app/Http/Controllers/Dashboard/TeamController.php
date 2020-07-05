@@ -51,8 +51,7 @@ class TeamController extends Controller
         $logo = $request->file('logo');
         $file_name = 'team_'.$team->name.'_'.uniqid();
         Storage::putFileAs('uploads/logos', $logo, $file_name);
-        //Image::make($logo)->fit(400,400)->encode('png', 70)->save('uploads/logos/'.$file_name.'.png');
-        Image::make($logo)->encode('png', 70)->save('uploads/logos/'.$file_name.'.png');
+        Image::make($logo)->fit(500,500)->encode('png', 70)->save('uploads/logos/'.$file_name.'.png');
         $team->logo = $file_name.'.png';
         $team->save();
         return redirect('manage/teams')->withErrors(['msg', 'The Message']);
@@ -92,7 +91,7 @@ class TeamController extends Controller
             $file_name = 'team_'.$team->name.'_'.uniqid();
             File::delete('uploads/logos/'.$team->logo);
             Storage::putFileAs('uploads/logos', $logo, $file_name);
-            Image::make($logo)->encode('png', 70)->save('uploads/logos/'.$file_name.'.png');
+            Image::make($logo)->fit(500,500)->encode('png', 70)->save('uploads/logos/'.$file_name.'.png');
             $team->logo = $file_name.'.png';
         }
         $team->save();

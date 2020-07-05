@@ -18,7 +18,7 @@ use App\Location;
 class ChannelController extends Controller
 {
     public function index () {
-      $channels = Channel::all();
+      $channels = Channel::orderByRaw('LENGTH(name) ASC')->orderBy('name', 'asc')->get();
       $time_now = date("Y-m-d H:i:s");
       $from = date("Y-m-d H:i:s", strtotime('-8 hours'));
       $to = date("Y-m-d H:i:s", strtotime('+8 hours'));
@@ -77,13 +77,13 @@ class ChannelController extends Controller
         $logo = $request->file('logo');
         $file_name = 'channel_logo_'.$channel->name.'_'.uniqid();
         Storage::putFileAs('uploads/channels', $logo, $file_name);
-        Image::make($logo)->encode('png', 70)->save('uploads/channels/'.$file_name.'.png');
+        Image::make($logo)->fit(1200,300)->encode('png', 70)->save('uploads/channels/'.$file_name.'.png');
         $channel->logo = $file_name.'.png';
         
         $banner = $request->file('banner');
         $file_name = 'channel_banner_'.$channel->name.'_'.uniqid();
         Storage::putFileAs('uploads/channels', $banner, $file_name);
-        Image::make($banner)->encode('png', 70)->save('uploads/channels/'.$file_name.'.jpeg');
+        Image::make($banner)->fit(1920,1080)->encode('jpeg', 70)->save('uploads/channels/'.$file_name.'.jpeg');
         $channel->banner = $file_name.'.jpeg';
         
         $channel->save();
@@ -142,7 +142,7 @@ class ChannelController extends Controller
         $file_name = 'channel_logo_'.$channel->name.'_'.uniqid();
         File::delete('uploads/channels/'.$channel->logo);
         Storage::putFileAs('uploads/channels', $logo, $file_name);
-        Image::make($logo)->encode('png', 70)->save('uploads/channels/'.$file_name.'.png');
+        Image::make($logo)->fit(1200,300)->encode('png', 70)->save('uploads/channels/'.$file_name.'.png');
         $channel->logo = $file_name.'.png';
         }
         
@@ -152,7 +152,7 @@ class ChannelController extends Controller
         $file_name = 'channel_banner_'.$channel->name.'_'.uniqid();
         File::delete('uploads/channels/'.$channel->banner);
         Storage::putFileAs('uploads/channels', $banner, $file_name);
-        Image::make($banner)->encode('png', 70)->save('uploads/channels/'.$file_name.'.jpeg');
+        Image::make($banner)->fit(1920,1080)->encode('jpeg', 70)->save('uploads/channels/'.$file_name.'.jpeg');
         $channel->banner = $file_name.'.jpeg';
         }
         

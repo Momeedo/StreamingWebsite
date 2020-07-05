@@ -16,7 +16,7 @@ use App\Location;
 class LocationController extends Controller
 {
     public function index () {
-      $locations = Location::all();
+      $locations = Location::orderBy('name', 'asc')->get();
       return view('dashboard.locations', ['locations' => $locations]);
     }
     

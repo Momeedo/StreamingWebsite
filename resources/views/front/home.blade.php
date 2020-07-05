@@ -21,7 +21,7 @@
 <section class="vds-main">
 	<div class="container">
 		<div class="vidz_sec">
-			<h3>Highlighted Live Games <a class="h3-seeall" href="{{ url('games') }}">(See All Highlighted Games)</a></h3>
+			<h3>Highlighted Games Of The Day <a class="h3-seeall" href="{{ url('games') }}">(See All Highlighted Games)</a></h3>
 			<div class="vidz_list">
 				<div class="row">
 					
@@ -38,8 +38,7 @@
                   <div class="round-details">
                     <i class="fas fa-futbol"></i>
                     <span>{{$game->competition->name}} 
-                          ({{$game->competition->country}}) 
-                          Week {{$game->round}}</span>
+                          ({{$game->competition->country}}) {{$game->round}}</span>
                   </div>
                   <div class="location-details">
                     <i class="fas fa-map-marker-alt"></i>
@@ -105,7 +104,9 @@
 				</div>
 			</div>
 		</div>
-	</section><!--services-sec end-->
+    </div>
+</section>
+    <!--services-sec end-->
 	
 	<section class="vds-main" id="channels-list">
 		<div class="vidz-row">
@@ -136,12 +137,9 @@
 										<h3><a href="channel-page.html" title="">BeIN Sports HD 1</a></h3>
 										<span><i class="fas fa-eye"></i> 686K</span>
 									</div>
-								</div><!--videoo end-->
+								</div><!--video end-->
 							</div>
             @endforeach
-							<!-- One Channel -->
-							
-							<!-- End One Channel -->
 							
 							<!-- One Channel -->
 							<div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
@@ -159,7 +157,7 @@
 										<h3><a href="channel-page.html" title="">RMC Sports 1</a></h3>
 										<span><i class="fas fa-eye"></i> 686K</span>
 									</div>
-								</div><!--videoo end-->
+								</div><!--video end-->
 							</div>
 							<!-- End One Channel -->
 						</div>

@@ -79,7 +79,7 @@
                             <tr>
                                 <th>Round</th>
                                 <td>
-                                    {!! Form::text('round', '', ['id' => 'round', 'class' => 'form-control', 'style' => 'width:100%']) !!}
+                                    {!! Form::text('round', '', ['id' => 'round', 'class' => 'form-control', 'style' => 'width:100%', 'placeholder' => 'Example: Week 5 or Semi Final (Leave blank if it's a Friendly game)']) !!}
                                 </td>
                             </tr>
                             <tr>

@@ -197,6 +197,7 @@
 			
 			<section class="more_items_sec text-center">
 				<div class="container">
+                <div style="text-align:center;padding:1em 0;"> <h3><a style="text-decoration:none;"><span style="color:gray;">Current local time in</span><br />GMT (UTC+0)</a></h3> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=medium&timezone=GMT" width="100%" height="115" frameborder="0" seamless></iframe></div>
 					<a class="top-page-button" href="#top" title="Top Page">
 						<i class="fas fa-arrow-alt-circle-up"></i>
 					</a>
