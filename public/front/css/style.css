@@ -468,6 +468,9 @@ header .container {
 	float: left;
 	width: 50%;
 }
+.main-logo {
+    max-width: 150px;
+}
 .search_form form {
 	position: relative;
 	/*max-width: 540px;*/

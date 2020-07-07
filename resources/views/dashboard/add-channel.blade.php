@@ -68,6 +68,7 @@
 										<option value="Arabic">Arabic</option>
 										<option value="English">English</option>
 										<option value="French">French</option>
+										<option value="Spanish">Spanish</option>
 									</select>
 								</td>
 							</tr>

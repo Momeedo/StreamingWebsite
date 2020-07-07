@@ -68,6 +68,7 @@
 										<option {{ $channel->language == 'Arabic' ? 'selected' : '' }} value="Arabic">Arabic</option>
 										<option {{ $channel->language == 'English' ? 'selected' : '' }}  value="English">English</option>
 										<option {{ $channel->language == 'French' ? 'selected' : '' }}  value="French">French</option>
+										<option {{ $channel->language == 'Spanish' ? 'selected' : '' }}  value="Spanish">Spanish</option>
 									</select>
 								</td>
 							</tr>

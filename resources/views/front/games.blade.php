@@ -1,4 +1,7 @@
 @extends('layouts.front')
+@section('title')
+Highlighted Games - nfoot.net, The Live Sports Channels Streaming Platform!
+@endsection
 @section('content')
 <section class="filter-sec">
 	<div class="container">

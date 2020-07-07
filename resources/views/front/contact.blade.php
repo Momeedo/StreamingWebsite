@@ -1,4 +1,7 @@
 @extends('layouts.front')
+@section('title')
+Contact - nfoot.net, The Live Sports Channels Streaming Platform!
+@endsection
 @section('content')
 <section class="vds-main">
 	<div class="container">

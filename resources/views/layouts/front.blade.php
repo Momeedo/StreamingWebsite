@@ -8,7 +8,23 @@
 		<meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-		<link rel="icon" href="{{ asset('/front/favicon.ico') }}">
+        <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('/front/images/favicon/apple-icon-57x57.png') }}">
+        <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('/front/images/favicon/apple-icon-60x60.png') }}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('/front/images/favicon/apple-icon-72x72.png') }}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('/front/images/favicon/apple-icon-76x76.png') }}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('/front/images/favicon/apple-icon-114x114.png') }}">
+        <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('/front/images/favicon/apple-icon-120x120.png') }}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('/front/images/favicon/apple-icon-144x144.png') }}">
+        <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('/front/images/favicon/apple-icon-152x152.png') }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/front/images/favicon/apple-icon-180x180.png') }}">
+        <link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('/front/images/favicon/android-icon-192x192.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('/front/images/favicon/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('/front/images/favicon/favicon-96x96.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/front/images/favicon/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ asset('/front/images/favicon/manifest.json') }}">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="{{ asset('/front/images/favicon/ms-icon-144x144.png') }}">
+        <meta name="theme-color" content="#ffffff">
 		<link rel="stylesheet" type="text/css" href="{{ asset('/front/css/animate.css') }}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('/front/css/bootstrap.min.css') }}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('/front/css/flatpickr.min.css') }}">
@@ -19,6 +35,9 @@
 		<link rel="stylesheet" type="text/css" href="{{ asset('/front/css/responsive.css') }}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('/front/css/color.css') }}">
 		<link href="{{ asset('/front/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+        <meta name="keywords" content="live,streaming,hd,football,sport,free,bein sports,alkaas,sky sports,rmc sport,unlimited,arabic,french,english,spanish,en direct,gratuit,match,illimité" />
+        <meta name="description" content="Watch free Live Streaming of sports channels in HD and with no interruptions (beIN Sports, SKy Sports, RMC Sport, AlKaas, Movistar and more!)" />
+
 	</head>
 	
 	
@@ -33,7 +52,7 @@
 									<i class="icon-menu"></i>
 								</a>
 								<a href="{{ url('/') }}" title="" class="logo">
-									<img src="images/logo.png" alt="">
+									<img class="main-logo" src="{{ url('/front/images/logo.png') }}" alt="">
 								</a>
 							</div><!--menu_logo end-->
 							<div class="search_form">
@@ -108,25 +127,58 @@
 					</ul>
 				</div><!--sd_menu end-->
 				<div class="sd_menu">
+					<h3><a href="{{ url('channels') }}">Channels</a></h3>
+					<ul class="mm_menu">
+						<li>
+							<span>
+								<i class="fas fa-tv"></i>
+							</span>
+							<a href="{{ url('/#english-channels') }}" title="">English Channels <sup>({{$stats_data->get('english-channels')}})</sup></a>
+						</li>
+						<li>
+							<span>
+								<i class="fas fa-tv"></i>
+							</span>
+							<a href="{{ url('/#french-channels') }}" title="">French Channels <sup>({{$stats_data->get('french-channels')}})</sup></a>
+						</li>
+						<li>
+							<span>
+								<i class="fas fa-tv"></i>
+							</span>
+							<a href="{{ url('/#spanish-channels') }}" title="">Spanish Channels <sup>({{$stats_data->get('spanish-channels')}})</sup></a>
+						</li>
+						<li>
+							<span>
+								<i class="fas fa-tv"></i>
+							</span>
+							<a href="{{ url('/#arabic-channels') }}" title="">Arabic Channels <sup>({{$stats_data->get('arabic-channels')}})</sup></a>
+						</li>
+					</ul>
+				</div>
+				<div class="sd_menu">
 					<h3><a href="{{ url('games') }}">Highlighted Games</a></h3>
 					<ul class="mm_menu">
 						<li>
 							<span>
 								<i class="fas fa-calendar"></i>
 							</span>
-							<a href="{{ url('games?status=on-going') }}" title="">On-going Games <sup>(1)</sup></a>
+							<a href="{{ url('games?status=on-going') }}" title="">On-going Games <sup
+                            @if ($stats_data->get('ongoing_now'))
+                                style="color:red;"
+                            @endif
+                            >({{$stats_data->get('on-going-games')}})</sup></a>
 						</li>
 						<li>
 							<span>
 								<i class="fas fa-calendar-day"></i>
 							</span>
-							<a href="{{ url('games?status=scheduled') }}" title="">Planned Games <sup>(2)</sup></a>
+							<a href="{{ url('games?status=scheduled') }}" title="">Planned Games <sup>({{$stats_data->get('planned-games')}})</sup></a>
 						</li>
 						<li>
 							<span>
 								<i class="fas fa-calendar-check"></i>
 							</span>
-							<a href="{{ url('games?status=completed') }}" title="">Completed Games <sup>(10)</sup></a>
+							<a href="{{ url('games?status=completed') }}" title="">Completed Games <sup>({{$stats_data->get('done-games')}})</sup></a>
 						</li>
 					</ul>
 				</div>
