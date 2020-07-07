@@ -7,8 +7,24 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-		<title>Dashboard</title>
-        <link rel="icon" href="{{ asset('/dashboard/img/favicon.ico') }}">
+		<title>Dashboard - nfoot.net</title>
+        <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('/front/images/favicon/apple-icon-57x57.png') }}">
+        <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('/front/images/favicon/apple-icon-60x60.png') }}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('/front/images/favicon/apple-icon-72x72.png') }}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('/front/images/favicon/apple-icon-76x76.png') }}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('/front/images/favicon/apple-icon-114x114.png') }}">
+        <link rel="apple-touch-icon" sizes="120x120" href="{{ asset('/front/images/favicon/apple-icon-120x120.png') }}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('/front/images/favicon/apple-icon-144x144.png') }}">
+        <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('/front/images/favicon/apple-icon-152x152.png') }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/front/images/favicon/apple-icon-180x180.png') }}">
+        <link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('/front/images/favicon/android-icon-192x192.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('/front/images/favicon/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('/front/images/favicon/favicon-96x96.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/front/images/favicon/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ asset('/front/images/favicon/manifest.json') }}">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="{{ asset('/front/images/favicon/ms-icon-144x144.png') }}">
+        <meta name="theme-color" content="#ffffff">
 		<link href="{{ asset('/dashboard/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 		<link href="{{ asset('/dashboard/css/sb-admin-2.min.css') }}" rel="stylesheet">
@@ -25,8 +41,8 @@
 				
 				<!-- Sidebar - Brand -->
 				<a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('manage') }}">
-					<div class="sidebar-brand-icon rotate-n-15">
-						<i class="fas fa-futbol"></i>
+					<div class="sidebar-brand-icon">
+						<img src="{{ url('/front/images/favicon/apple-icon-72x72.png') }}" />
 					</div>
 					<div class="sidebar-brand-text mx-3">Dashboard</div>
 				</a>
