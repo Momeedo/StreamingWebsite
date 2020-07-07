@@ -7,11 +7,12 @@ use Illuminate\Http\Request;
 
 use App\Channel;
 use App\Game;
+use App\ChannelGames;
 
 class HomeController extends Controller
 {
     public function index () {
-      $channels = Channel::orderByRaw('LENGTH(name) ASC')->orderBy('name', 'asc')->get();
+      $channels = Channel::orderBy('views', 'desc')->get();
       $time_now = date("Y-m-d H:i:s");
       $from = date("Y-m-d H:i:s", strtotime('-4 hours'));
       $to = date("Y-m-d H:i:s", strtotime('+2 day'));

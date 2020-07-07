@@ -90,20 +90,19 @@
 							<tr id="game_{{$game->id}}">
 								<td>{{$game->id}}</td>
 								<td style="text-align:center;">
-                                    @if (in_array ($game->id, $games_with_a_game_now))
-                                    <i class="fas fa-circle" style="color:#e74a3b;"></i><br>On-Going
-                                    @elseif (in_array ($game->id, $games_with_a_game_completed))
-                                    <i class="fas fa-check-circle" style="color:#1cc88a;"></i><br>Completed
-                                    @else
-                                    <i class="fas fa-calendar" style="color:#f6c23e;"></i><br>Planned
-                                    @endif
-                                <!--<br>{{$game->status($game->start_date, $game->end_date)}}-->
-                                </td>
+                  @if (in_array ($game->id, $games_with_a_game_now))
+                  <i class="fas fa-circle" style="color:#e74a3b;"></i><br>On-Going
+                  @elseif (in_array ($game->id, $games_with_a_game_completed))
+                  <i class="fas fa-check-circle" style="color:#1cc88a;"></i><br>Completed
+                  @else
+                  <i class="fas fa-calendar" style="color:#f6c23e;"></i><br>Planned
+                  @endif
+                </td>
 								<td>
-                                @foreach($game->channels as $channel)
-                                    <a href="{{url('/channel/')}}/{{$channel->id}}"><i class="fas fa-tv"></i> {{$channel->name}}</a><br>
-                                @endforeach
-                                </td>
+                  @foreach($game->channels as $channel)
+                    <a href="{{url('/channel/')}}/{{$channel->id}}"><i class="fas fa-tv"></i> {{$channel->name}}</a><br>
+                  @endforeach
+                </td>
 								<td style="text-align:center;"><img width="60px" src="{{url('/uploads/logos')}}/{{$game->teamA->logo}}"> <br>{{$game->teamA->name}}</td>
 								<td style="text-align:center;"><img width="60px" src="{{url('/uploads/logos')}}/{{$game->teamB->logo}}"><br> {{$game->teamB->name}}</td>
 								<td style="text-align:center;"><img width="60px" src="{{url('/uploads/competitions')}}/{{$game->competition['logo']}}"><br>{{$game->competition['name']}}</td>

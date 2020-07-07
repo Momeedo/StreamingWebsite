@@ -6,7 +6,8 @@
 		@yield('meta')
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="" />
-		<meta name="keywords" content="" />
+    <meta name="keywords" content="" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 		<link rel="icon" href="{{ asset('/front/favicon.ico') }}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('/front/css/animate.css') }}">
 		<link rel="stylesheet" type="text/css" href="{{ asset('/front/css/bootstrap.min.css') }}">
@@ -107,29 +108,6 @@
 					</ul>
 				</div><!--sd_menu end-->
 				<div class="sd_menu">
-					<h3><a href="{{ url('channels') }}">Channels</a></h3>
-					<ul class="mm_menu">
-						<li>
-							<span>
-								<i class="fas fa-tv"></i>
-							</span>
-							<a href="{{ url('channels?lang=english') }}" title="">English Channels <sup>(5)</sup></a>
-						</li>
-						<li>
-							<span>
-								<i class="fas fa-tv"></i>
-							</span>
-							<a href="{{ url('channels?lang=french') }}" title="">French Channels <sup>(2)</sup></a>
-						</li>
-						<li>
-							<span>
-								<i class="fas fa-tv"></i>
-							</span>
-							<a href="{{ url('channels?lang=arabic') }}" title="">Arabic Channels <sup>(7)</sup></a>
-						</li>
-					</ul>
-				</div>
-				<div class="sd_menu">
 					<h3><a href="{{ url('games') }}">Highlighted Games</a></h3>
 					<ul class="mm_menu">
 						<li>
@@ -215,21 +193,12 @@
 							<span aria-hidden="true">×</span>
 						</button>
 					</div>
-					<div class="modal-body" style="max-height:500px;overflow-y:scroll;">
+					<div class="modal-body" style="max-height:500px;overflow-y:scroll;" id="channels_place">
 						<!-- One Channel -->
-						<div class="channel-selection">
+						<!-- <div class="channel-selection">
 							<a href="channel-page.html"><img src="https://cdn.bein.net/fr/wp-content/uploads/2018/05/beINSPORTSHD1.png"></a>
-						</div>
-						<!-- One Channel -->
-						<!-- End One Channel -->
-						<div class="channel-selection">
-							<a href="channel-page.html"><img src="https://cdn.bein.net/fr/wp-content/uploads/2018/05/beINSPORTSHD1.png"></a>
-						</div>
-						<!-- One Channel -->
-						<!-- End One Channel -->
-						<div class="channel-selection">
-							<a href="channel-page.html"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Fox_Sports_Logo.svg/1200px-Fox_Sports_Logo.svg.png"></a>
-						</div>
+            </div> -->
+
 						<!-- End One Channel -->
 					</div>
 					<div class="modal-footer">
@@ -242,6 +211,22 @@
 		<script src="{{ asset('/front/js/popper.js') }}"></script>
 		<script src="{{ asset('/front/js/bootstrap.min.js') }}"></script>
 		<script src="{{ asset('/front/js/flatpickr.js') }}"></script>
-		<script src="{{ asset('/front/js/script.js') }}"></script>
+    <script src="{{ asset('/front/js/script.js') }}"></script>
+    <script  type="text/javascript">
+      function selectGame (channels) {
+        Array.from(channels).forEach(c => {
+          const channelSelectDiv = document.createElement('div')
+          const channelPage = document.createElement('a')
+          const channelImg = document.createElement('img')
+          $(channelSelectDiv).addClass('channel-selection')
+          $(channelPage).attr('href', `/channel/${c.id}`)
+          $(channelImg).attr('src', `{{url('/uploads/channels')}}/${c.logo}`)
+          $(channelPage).append(channelImg)
+          $(channelSelectDiv).append(channelPage)
+
+          $('#channels_place').append(channelSelectDiv)
+        })
+      }
+    </script>
 	</body>
 </html>															

@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Game;
 
 class Channel extends Model
 {
@@ -18,15 +19,14 @@ class Channel extends Model
      * @var string
      */
     protected $primaryKey = 'id';
-    protected $fillable = [
-      'banner', 'logo', 'name', 'link', 'country', 'language', 'status'
-    ];
+    protected $fillable = ['*'];
+
 
     public function tags () {
       return $this->belongsToMany(Tags::class, 'channel_tags');
     }
     
     public function games () {
-      return $this->belongsToMany(Games::class, 'channel_games');
+      return $this->belongsToMany(Game::class, 'channel_games');
     }
 }
