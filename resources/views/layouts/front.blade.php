@@ -273,6 +273,7 @@
           $(channelSelectDiv).addClass('channel-selection')
           $(channelPage).attr('href', `/channel/${c.id}`)
           $(channelImg).attr('src', `{{url('/uploads/channels')}}/${c.logo}`)
+          $(channelImg).attr('class', `selection-img`)
           $(channelPage).append(channelImg)
           $(channelSelectDiv).append(channelPage)
 

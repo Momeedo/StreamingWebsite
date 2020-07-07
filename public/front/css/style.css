@@ -616,14 +616,36 @@ header .container {
 .channel-selection a img{
 	max-width: 200px;
 	max-height: 50px;
+    transition: all .2s ease-in-out;
+    --stroke-pos: 1px;
+    --stroke-neg: -1px;
+    --stroke-color: rgba(0, 0, 0, 0.8);
+    filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) 
+      drop-shadow(var(--stroke-neg) 0 var(--stroke-color))
+      drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color))
+      drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color))
+      drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) 
+      drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color))
+      drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color))
+      drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color)); 
 }
 .channel-selection a img:hover {
-	filter: brightness(110%);
-	-webkit-transform: scale(1.2);
-	-moz-transform: scale(1.2);
-	-ms-transform: scale(1.2);
-	-o-transform: scale(1.2);
-	transform: scale(1.2);
+	-webkit-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	-o-transform: scale(1.05);
+	transform: scale(1.05);
+    --stroke-pos: 1px;
+    --stroke-neg: -1px;
+    --stroke-color: rgba(0, 0, 0, 0.8);
+    filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color)) 
+      drop-shadow(var(--stroke-neg) 0 var(--stroke-color))
+      drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color))
+      drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color))
+      drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color)) 
+      drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color))
+      drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color))
+      drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color)); 
 }
 
 /* ============== BOTTOM HEADER ============= */
