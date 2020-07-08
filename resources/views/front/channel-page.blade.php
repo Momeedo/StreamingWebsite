@@ -2,6 +2,16 @@
 @section('title')
 {{$channel->name}} ({{$channel->language}}) Live HD Streaming - nfoot.net, The Live Sports Channels Streaming Platform!
 @endsection
+@section('meta')
+<meta property="og:title" content="Watch {{$channel->name}} ({{$channel->language}}) Live HD Streaming - nfoot.net, The Live Sports Channels Streaming Platform!">
+<meta property="og:description" content="Watch free Live Streaming of {{$channel->name}} ({{$channel->language}}) in HD and with no interruptions!">
+<meta property="og:image" content="{{url('/uploads/channels')}}/{{$channel->banner}}">
+<meta property="og:url" content="https://nfoot.net">
+<meta name="twitter:title" content="Watch {{$channel->name}} ({{$channel->language}}) Live HD Streaming - nfoot.net, The Live Sports Channels Streaming Platform!">
+<meta name="twitter:description" content="Watch free Live Streaming of {{$channel->name}} ({{$channel->language}}) in HD and with no interruptions!">
+<meta name="twitter:image" content="{{url('/uploads/channels')}}/{{$channel->banner}}">
+<meta name="twitter:card" content="{{url('/uploads/channels')}}/{{$channel->banner}}">
+@endsection
 @section('content')
 <section class="mn-sec full_wdth_single_video">
     <div class="container">
@@ -31,7 +41,7 @@
                         <div class="info-pr-sec">
                             <ul class="chan_cantrz">
                                 <li>
-                                    <a href="#" title="" class="donate">Donate to support the website</a>
+                                    <a data-toggle="modal" data-target="#donateSelectModal" title="Donate" class="donate"><i class="fab fa-bitcoin"></i> Donate to support the website</a>
                                 </li>
                             </ul>
                             <ul class="df-list">
@@ -135,13 +145,13 @@
                         @endif
                         @empty
                         <!-- If no Highlighted game -->
-                        <div class="button-game" id="button-game-none" onclick="window.location.href='#channels-list'">
+                        <div class="button-game" id="button-game-none" onclick="window.location.href='/#channels-list'">
                             <div class="none-highlighted-game">
                                 <div class="no-game-text">
                                     <span>No Highlighted Live Games at the time</span>
                                 </div>
                                 <div class="check-channels-text">
-                                    <span><i class="fas fa-arrow-circle-down"></i> You can still browse Live Channels to find your game <i class="fas fa-arrow-circle-down"></i></span>
+                                    <span><i class="fas fa-home"></i> You can still browse Live Channels to find your game <i class="fas fa-home"></i></span>
                                 </div>
                             </div>
                         </div>

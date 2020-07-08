@@ -2,14 +2,25 @@
 @section('title')
 Highlighted Games - nfoot.net, The Live Sports Channels Streaming Platform!
 @endsection
+@section('meta')
+<meta property="og:title" content="Games - nfoot.net, The Live Sports Channels Streaming Platform!">
+<meta property="og:description" content="Watch free Live Streaming of sports channels in HD and with no interruptions (beIN Sports, SKy Sports, RMC Sport, AlKaas, Movistar and more!)">
+<meta property="og:image" content="{{url('/front/images/website_header.jpg')}}">
+<meta property="og:url" content="https://nfoot.net">
+<meta name="twitter:title" content="Games - nfoot.net, The Live Sports Channels Streaming Platform!">
+<meta name="twitter:description" content="Watch free Live Streaming of sports channels in HD and with no interruptions (beIN Sports, SKy Sports, RMC Sport, AlKaas, Movistar and more!)">
+<meta name="twitter:image" content="{{url('/front/images/website_header.jpg')}}">
+<meta name="twitter:card" content="{{url('/front/images/website_header.jpg')}}">
+@endsection
 @section('content')
+<!--
 <section class="filter-sec">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-2 col-md-4 col-sm-4 col-6 full_wdth">
 				<div class="filter">
 					<h3 class="fl-head"><i class="icon-filter"></i> Filter</h3>
-				</div><!--filter end-->						
+				</div>					
 			</div>
 			<div class="col-lg-2 col-md-4 col-sm-4 col-6 full_wdth">
 				<div class="filter">
@@ -19,7 +30,7 @@ Highlighted Games - nfoot.net, The Live Sports Channels Streaming Platform!
 						<li><a href="#" title="">On-going</a></li>
 						<li><a href="#" title="">Completed</a></li>
 					</ul>
-				</div><!--filter end-->
+				</div>
 			</div>
 			<div class="col-lg-2 col-md-4 col-sm-4 col-6 full_wdth">
 				<div class="filter">
@@ -32,7 +43,7 @@ Highlighted Games - nfoot.net, The Live Sports Channels Streaming Platform!
 						<li><a href="#" title="">Volleyball</a></li>
 						<li><a href="#" title="">Other</a></li>
 					</ul>
-				</div><!--filter end-->
+				</div>
 			</div>
 			
 			<div class="col-lg-6 col-md-4 col-sm-4 col-6 full_wdth">
@@ -42,11 +53,12 @@ Highlighted Games - nfoot.net, The Live Sports Channels Streaming Platform!
 						<li><a href="#" title="">La Liga (Spain)</a></li>
 						<li><a href="#" title="">Some other competition (from database order by name)</a></li>
 					</ul>
-				</div><!--filter end-->
+				</div>
 			</div>
 		</div>
 	</div>
-</section><!--filter-sec end-->
+</section>
+-->
 
 <section class="vds-main">
 	<div class="container">

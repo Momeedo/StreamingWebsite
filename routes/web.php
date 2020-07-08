@@ -56,6 +56,7 @@ Route::get('/', 'Front\HomeController@index');
 Route::get('/privacy-policy', 'Front\HomeController@privacy');
 Route::get('/contact', 'Front\ContactController@index');
 Route::get('/games', 'Front\GameController@index');
+Route::post('/contact-create', 'Front\ContactController@store')->name('contact-create');
 
 //Test Puroposes
 Route::get('/channel/{id}', 'Front\ChannelController@channel')->middleware('auth');

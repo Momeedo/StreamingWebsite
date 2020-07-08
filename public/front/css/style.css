@@ -323,6 +323,7 @@ button:hover,
 .ch-pswd button:hover,
 .controls-lv li a.btn-default:hover {
 	color: #fff;
+    cursor: pointer;
 	background-color: #4a90e2;
 }
 .container {
@@ -574,6 +575,7 @@ header .container {
 	display: inline-block;
 	color: #ffffff;
 	font-size: 16px;
+    cursor: pointer;
 	background-color: #272626;
 	height: 38px;
 	line-height: 38px;
@@ -582,6 +584,7 @@ header .container {
 }
 .btn-default:hover {
 	color: #fff;
+    cursor: pointer;
 	background-color: #4a90e2;
 }
 .controls-lv li a.btn-default {
@@ -613,7 +616,7 @@ header .container {
 	padding: 10px;
 	text-align: center;
 }
-.channel-selection a img{
+.channel-selection a img:not(.no-outline){
 	max-width: 200px;
 	max-height: 50px;
     transition: all .2s ease-in-out;
@@ -629,7 +632,7 @@ header .container {
       drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color))
       drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color)); 
 }
-.channel-selection a img:hover {
+.channel-selection a img:hover:not(.no-outline) {
 	-webkit-transform: scale(1.05);
 	-moz-transform: scale(1.05);
 	-ms-transform: scale(1.05);
@@ -2204,6 +2207,7 @@ svg:hover path {
 }
 .donate {
 	background-color: #26e491;
+    cursor: pointer;
 	color: #fff;
 }
 .subscribe {
@@ -4493,7 +4497,7 @@ header.hp_1 .side_links li.user_contrl {
 	font-size: 50px;
 }
 .top-page-button:hover {
-	pointer: cursor;
+	cursor: pointer;
 	color: #4a90e2;
 }
 

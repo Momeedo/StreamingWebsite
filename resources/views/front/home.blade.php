@@ -2,6 +2,16 @@
 @section('title')
 Home - nfoot.net, The Live Sports Channels Streaming Platform!
 @endsection
+@section('meta')
+<meta property="og:title" content="Home - nfoot.net, The Live Sports Channels Streaming Platform!">
+<meta property="og:description" content="Watch free Live Streaming of sports channels in HD and with no interruptions (beIN Sports, SKy Sports, RMC Sport, AlKaas, Movistar and more!)">
+<meta property="og:image" content="{{url('/front/images/website_header.jpg')}}">
+<meta property="og:url" content="https://nfoot.net">
+<meta name="twitter:title" content="Home - nfoot.net, The Live Sports Channels Streaming Platform!">
+<meta name="twitter:description" content="Watch free Live Streaming of sports channels in HD and with no interruptions (beIN Sports, SKy Sports, RMC Sport, AlKaas, Movistar and more!)">
+<meta name="twitter:image" content="{{url('/front/images/website_header.jpg')}}">
+<meta name="twitter:card" content="{{url('/front/images/website_header.jpg')}}">
+@endsection
 @section('content')
 <section class="banner-section">
     <div class="container">

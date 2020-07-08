@@ -13,10 +13,17 @@ class ChannelController extends Controller
 {
     public function channel ($id) {
       $channel = Channel::findOrFail($id);
-      $this->createViewLog($id);
-      $channelLink = 'https://stream.tn/embed-'.$channel->link.'.html';
-      $moreChannels = Channel::all()->where('language', $channel->language)->random(4);
-      return view('front.channel-page', ['moreChannels' => $moreChannels, 'channel' => $channel, 'link' => $channelLink]);
+        if ($channel->stauts == true)
+        {
+          $this->createViewLog($id);
+          $channelLink = 'https://stream.tn/streamplay/'.$channel->link;
+          $moreChannels = Channel::all()->where('language', $channel->language)->random(4);
+          return view('front.channel-page', ['moreChannels' => $moreChannels, 'channel' => $channel, 'link' => $channelLink]);
+        }
+        else
+        {
+          abort(404);
+        }
     }
     
 		public function createViewLog($id) {

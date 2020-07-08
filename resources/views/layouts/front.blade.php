@@ -55,6 +55,8 @@
 									<img class="main-logo" src="{{ url('/front/images/logo.png') }}" alt="">
 								</a>
 							</div><!--menu_logo end-->
+                            <!-- Search Form -->
+                            <!--
 							<div class="search_form">
 								<form>
 									<input type="text" name="search" placeholder="Search Channels">
@@ -62,7 +64,8 @@
 										<i class="icon-search"></i>
 									</button>
 								</form>
-							</div><!--search_form end-->
+							</div>
+                            -->
 							<ul class="controls-lv">
 								<li class="user-log">
 									<div class="user-ac-img">
@@ -198,7 +201,8 @@
 						</li>
 					</ul>
 				</div><!--sd_menu end-->
-				
+                <!-- Social Links -->
+				<!--
 				<div class="sd_menu bb-0">
 					<ul class="social_links">
 						<li>
@@ -216,8 +220,9 @@
 								<i class="icon-instagram"></i>
 							</a>
 						</li>
-					</ul><!--social_links end-->
-				</div><!--sd_menu end-->
+					</ul>
+				</div>
+                -->
 				<div class="dd_menu"></div>
 			</div><!--side_menu end-->
 			
@@ -227,7 +232,7 @@
 			
 			<section class="more_items_sec text-center">
 				<div class="container">
-                <div style="text-align:center;padding:1em 0;"> <h3><a style="text-decoration:none;"><span style="color:gray;">Current local time in</span><br />GMT (UTC+0)</a></h3> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=medium&timezone=GMT" width="100%" height="115" frameborder="0" seamless></iframe></div>
+                <div style="text-align:center;padding:1em 0;"> <h3><a style="text-decoration:none;"><span style="color:gray;">Current local time</span><br />Europe/London</a></h3> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=medium&timezone=Europe/London" width="100%" height="115" frameborder="0" seamless></iframe></div>
 					<a class="top-page-button" href="#top" title="Top Page">
 						<i class="fas fa-arrow-alt-circle-up"></i>
 					</a>
@@ -246,19 +251,42 @@
 						</button>
 					</div>
 					<div class="modal-body" style="max-height:500px;overflow-y:scroll;" id="channels_place">
-						<!-- One Channel -->
-						<!-- <div class="channel-selection">
-							<a href="channel-page.html"><img src="https://cdn.bein.net/fr/wp-content/uploads/2018/05/beINSPORTSHD1.png"></a>
-            </div> -->
 
-						<!-- End One Channel -->
 					</div>
 					<div class="modal-footer">
 						<button class="btn btn-danger" type="button" data-dismiss="modal">Cancel</button>
 					</div>
 				</div>
 			</div>
-		</div>		
+		</div>
+        
+		<!-- Donation Modal-->
+		<div class="modal fade" id="donateSelectModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Donate to support the website</h5>
+						<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body" style="max-height:500px;overflow-y:scroll;" id="channels_place">
+						<!-- Content -->
+						<div class="channel-selection">
+                            <span>Donate via <i class="fab fa-bitcoin"></i> Bitcoin (BTC) to the following address:<br><b style="color:#007bff">1Anzxz3RzLCSpChhZi8Fud7WapBo35Qc4A</b></span>
+                            <br><br>
+							<a><img class="no-outline" style="max-width: 300px;" src="{{ url('/front/images/btc_qr.jpg?v=1') }}"></a>
+                            <br><br>
+                            <span>Donating helps us upgrading our servers and add more channels! <i class="fas fa-grin-alt"></i></span>
+                        </div>
+						<!-- Content -->
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-danger" type="button" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>	
 		<script src="{{ asset('/front/js/jquery.min.js') }}"></script>
 		<script src="{{ asset('/front/js/popper.js') }}"></script>
 		<script src="{{ asset('/front/js/bootstrap.min.js') }}"></script>
@@ -266,6 +294,7 @@
     <script src="{{ asset('/front/js/script.js') }}"></script>
     <script  type="text/javascript">
       function selectGame (channels) {
+        $('.channel-selection').remove()
         Array.from(channels).forEach(c => {
           const channelSelectDiv = document.createElement('div')
           const channelPage = document.createElement('a')

@@ -43,7 +43,7 @@
 						<div class="row no-gutters align-items-center">
 							<div class="col mr-2">
 								<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pending Messages</div>
-								<div class="h5 mb-0 font-weight-bold text-gray-800">4</div>
+								<div class="h5 mb-0 font-weight-bold text-gray-800">{{$stats_data->get('unread_messages_count')}}</div>
 							</div>
 							<div class="col-auto">
 								<i class="fas fa-comments fa-2x text-gray-300"></i>
@@ -59,7 +59,7 @@
 						<div class="row no-gutters align-items-center">
 							<div class="col mr-2">
 								<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Views</div>
-								<div class="h5 mb-0 font-weight-bold text-gray-800">40000</div>
+								<div class="h5 mb-0 font-weight-bold text-gray-800">{{$stats_data->get('total_views')}}</div>
 							</div>
 							<div class="col-auto">
 								<i class="fas fa-globe-europe fa-2x text-gray-300"></i>
@@ -75,7 +75,7 @@
 						<div class="row no-gutters align-items-center">
 							<div class="col mr-2">
 								<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Most Viewed</div>
-								<div class="h5 mb-0 font-weight-bold text-gray-800">BeIN Sports (500)</div>
+								<div class="h5 mb-0 font-weight-bold text-gray-800">{{$stats_data->get('most_viewed_channel')->name}} ({{$stats_data->get('most_viewed_channel')->views}})</div>
 							</div>
 							<div class="col-auto">
 								<i class="fas fa-globe-europe fa-2x text-gray-300"></i>
@@ -91,7 +91,7 @@
 						<div class="row no-gutters align-items-center">
 							<div class="col mr-2">
 								<div class="text-xs font-weight-bold text-success text-uppercase mb-1">Games</div>
-								<div class="h5 mb-0 font-weight-bold text-gray-800">100</div>
+								<div class="h5 mb-0 font-weight-bold text-gray-800">{{$stats_data->get('games_count')}}</div>
 							</div>
 							<div class="col-auto">
 								<i class="fas fa-calendar-alt fa-2x text-gray-300"></i>
@@ -107,7 +107,7 @@
 						<div class="row no-gutters align-items-center">
 							<div class="col mr-2">
 								<div class="text-xs font-weight-bold text-success text-uppercase mb-1">Channels</div>
-								<div class="h5 mb-0 font-weight-bold text-gray-800">10</div>
+								<div class="h5 mb-0 font-weight-bold text-gray-800">{{$stats_data->get('channels_count')}} ({{$stats_data->get('channels_active_count')}} active)</div>
 							</div>
 							<div class="col-auto">
 								<i class="fas fa-tv fa-2x text-gray-300"></i>
@@ -123,7 +123,7 @@
 						<div class="row no-gutters align-items-center">
 							<div class="col mr-2">
 								<div class="text-xs font-weight-bold text-success text-uppercase mb-1">Teams</div>
-								<div class="h5 mb-0 font-weight-bold text-gray-800">45</div>
+								<div class="h5 mb-0 font-weight-bold text-gray-800">{{$stats_data->get('teams_count')}}</div>
 							</div>
 							<div class="col-auto">
 								<i class="fas fa-futbol fa-2x text-gray-300"></i>
@@ -139,7 +139,7 @@
 						<div class="row no-gutters align-items-center">
 							<div class="col mr-2">
 								<div class="text-xs font-weight-bold text-success text-uppercase mb-1">Cometitions</div>
-								<div class="h5 mb-0 font-weight-bold text-gray-800">8</div>
+								<div class="h5 mb-0 font-weight-bold text-gray-800">{{$stats_data->get('competitions_count')}}</div>
 							</div>
 							<div class="col-auto">
 								<i class="fas fa-trophy fa-2x text-gray-300"></i>
@@ -157,7 +157,7 @@
 								<div class="text-xs font-weight-bold text-info text-uppercase mb-1">Active Games</div>
 								<div class="row no-gutters align-items-center">
 									<div class="col-auto">
-										<div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">5</div>
+										<div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{$stats_data->get('on-going-games')}}</div>
 									</div>
 								</div>
 							</div>
@@ -177,7 +177,7 @@
 								<div class="text-xs font-weight-bold text-info text-uppercase mb-1">Planned Games (All)</div>
 								<div class="row no-gutters align-items-center">
 									<div class="col-auto">
-										<div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">5</div>
+										<div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{$stats_data->get('planned-games')}}</div>
 									</div>
 								</div>
 							</div>
@@ -197,7 +197,7 @@
 								<div class="text-xs font-weight-bold text-info text-uppercase mb-1">Planned Games (Today)</div>
 								<div class="row no-gutters align-items-center">
 									<div class="col-auto">
-										<div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">2</div>
+										<div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{$stats_data->get('planned-games-today')}}</div>
 									</div>
 								</div>
 							</div>
@@ -217,7 +217,7 @@
 								<div class="text-xs font-weight-bold text-info text-uppercase mb-1">Completed Games (Today)</div>
 								<div class="row no-gutters align-items-center">
 									<div class="col-auto">
-										<div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">4</div>
+										<div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{$stats_data->get('done-games')}}</div>
 									</div>
 								</div>
 							</div>
