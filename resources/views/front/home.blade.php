@@ -123,7 +123,7 @@ Home - nfoot.net, The Live Sports Channels Streaming Platform!
             </div>
         </div>
     </div>
-</section >
+</section>
 <!--services-sec end-->
 
 <section class="vds-main">
