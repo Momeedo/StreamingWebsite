@@ -1045,7 +1045,7 @@ svg:hover path {
 }
 .vid-lang {
 	position: absolute;
-	bottom: 0;
+	bottom: 1px;
 	left: 0;
 	height: 21px;
 	line-height: 21px;
@@ -1080,7 +1080,7 @@ svg:hover path {
 }
 .vid-live {
 	position: absolute;
-	bottom: 0;
+	bottom: 1px;
 	right: 0;
 	height: 21px;
 	line-height: 21px;

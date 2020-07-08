@@ -131,6 +131,7 @@ Home - nfoot.net, The Live Sports Channels Streaming Platform!
         <div class="container">
             <div class="vidz_sec">
                 <h3>All Channels <a class="h3-seeall" href="{{ url('channels') }}"></a></h3>
+                @if ($channels->where('language', 'English')->count() > 0)
                 <div class="vidz_list" id="english-channels">
                     <h3>English</h3>
                     <div class="row">
@@ -169,8 +170,10 @@ Home - nfoot.net, The Live Sports Channels Streaming Platform!
                         @endforeach
                     </div>
                 </div>
+                @endif
                 <!--vidz_list end-->
-
+                
+                @if ($channels->where('language', 'French')->count() > 0)
                 <div class="vidz_list mt-5" id="french-channels">
                     <h3>French</h3>
                     <div class="row">
@@ -212,6 +215,8 @@ Home - nfoot.net, The Live Sports Channels Streaming Platform!
                     </div>
                 </div>
                 <!--vidz_list end-->
+                @endif
+                @if ($channels->where('language', 'Spanish')->count() > 0)
                 <div class="vidz_list mt-5" id="spanish-channels">
                     <h3>Spanish</h3>
                     <div class="row">
@@ -253,6 +258,8 @@ Home - nfoot.net, The Live Sports Channels Streaming Platform!
                     </div>
                 </div>
                 <!--vidz_list end-->
+            @endif
+            @if ($channels->where('language', 'Arabic')->count() > 0)
             <div class="vidz_list mt-5" id="arabic-channels">
                 <h3>Arabic</h3>
                 <div class="row">
@@ -294,6 +301,7 @@ Home - nfoot.net, The Live Sports Channels Streaming Platform!
                 </div>
             </div>
             <!--vidz_list end-->
+            @endif
         </div>
         <!--vidz_videos end-->
     </div>
